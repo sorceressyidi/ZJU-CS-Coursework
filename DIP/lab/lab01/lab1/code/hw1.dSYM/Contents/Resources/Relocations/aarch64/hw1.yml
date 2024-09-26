@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/lily/Desktop/cszju/DIP/lab/lab01/lab1/code/hw1'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003594, symSize: 0x1A0 }
+  - { offsetInCU: 0x5D, offset: 0x5D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003594, symSize: 0x1A0 }
+  - { offsetInCU: 0xB2, offset: 0xB2, size: 0x8, addend: 0x0, symName: __Z14Gray_Transform3BMPii, symObjAddr: 0x1A0, symBinAddr: 0x100003734, symSize: 0x304 }
+  - { offsetInCU: 0x1FF, offset: 0x1FF, size: 0x8, addend: 0x0, symName: __Z20Brightness_Transform3BMPii, symObjAddr: 0x4A4, symBinAddr: 0x100003A38, symSize: 0x264 }
+  - { offsetInCU: 0x30A, offset: 0x30A, size: 0x8, addend: 0x0, symName: __Z7RGB_YUVdddPdS_S_, symObjAddr: 0x708, symBinAddr: 0x100003C9C, symSize: 0xCC }
+  - { offsetInCU: 0x378, offset: 0x378, size: 0x8, addend: 0x0, symName: __Z6AdjustPd, symObjAddr: 0x7D4, symBinAddr: 0x100003D68, symSize: 0x70 }
+  - { offsetInCU: 0x3A0, offset: 0x3A0, size: 0x8, addend: 0x0, symName: __Z7YUV_RGBdddPdS_S_, symObjAddr: 0x844, symBinAddr: 0x100003DD8, symSize: 0x88 }
+...

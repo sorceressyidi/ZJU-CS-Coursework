@@ -1,0 +1,40 @@
+6
+Q 1 P 2 e 3 D 1 E 6 G 2
+4
+Q 1
+P 000
+e 010
+D 0011
+E 0010
+G 011
+Q 0010
+P 000
+e 010
+D 0001
+E 1
+G 011
+Q 1101
+P 111
+e 101
+D 1100
+E 0
+G 100
+Q 0010
+P 000
+e 010
+D 0011
+E 1
+G 011
+
+
+----------------------------------
+Output:
+No
+No
+Yes
+Yes
+----------------------------------
+1.has a higher cost than optimal
+2.have a prefix error
+3 and 4 are both correct but only change the 0-1 mapping of the code
+------------------------------

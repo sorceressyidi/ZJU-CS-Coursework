@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/lily/Desktop/浙江大学/学业/大二下/ADS/HW/hw6"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x100003938, symSize: 0x32C }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _input, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0x6E, offset: 0x6E, size: 0x8, addend: 0x0, symName: _wolves, symBinAddr: 0x100008010, symSize: 0x0 }
+  - { offsetInCU: 0x83, offset: 0x83, size: 0x8, addend: 0x0, symName: _identities, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x8C, offset: 0x8C, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x100003938, symSize: 0x32C }
+  - { offsetInCU: 0x1DB, offset: 0x1DB, size: 0x8, addend: 0x0, symName: _BT, symObjAddr: 0x32C, symBinAddr: 0x100003C64, symSize: 0x11C }
+  - { offsetInCU: 0x22D, offset: 0x22D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x448, symBinAddr: 0x100003D80, symSize: 0x1CC }
+...

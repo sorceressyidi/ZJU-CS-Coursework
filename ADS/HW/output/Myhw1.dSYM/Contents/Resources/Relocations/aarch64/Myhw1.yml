@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/lily/Desktop/浙江大学/学业/大二下/ADS/HW/output/Myhw1"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _max, symObjAddr: 0x0, symBinAddr: 0x100003A84, symSize: 0x48 }
+  - { offsetInCU: 0x91, offset: 0x91, size: 0x8, addend: 0x0, symName: _max, symObjAddr: 0x0, symBinAddr: 0x100003A84, symSize: 0x48 }
+  - { offsetInCU: 0xC7, offset: 0xC7, size: 0x8, addend: 0x0, symName: _height, symObjAddr: 0x48, symBinAddr: 0x100003ACC, symSize: 0x44 }
+  - { offsetInCU: 0xEF, offset: 0xEF, size: 0x8, addend: 0x0, symName: _RRotation, symObjAddr: 0x8C, symBinAddr: 0x100003B10, symSize: 0xB0 }
+  - { offsetInCU: 0x125, offset: 0x125, size: 0x8, addend: 0x0, symName: _LRotation, symObjAddr: 0x13C, symBinAddr: 0x100003BC0, symSize: 0xB0 }
+  - { offsetInCU: 0x15B, offset: 0x15B, size: 0x8, addend: 0x0, symName: _RLRotation, symObjAddr: 0x1EC, symBinAddr: 0x100003C70, symSize: 0x38 }
+  - { offsetInCU: 0x183, offset: 0x183, size: 0x8, addend: 0x0, symName: _LRRotation, symObjAddr: 0x224, symBinAddr: 0x100003CA8, symSize: 0x38 }
+  - { offsetInCU: 0x1AB, offset: 0x1AB, size: 0x8, addend: 0x0, symName: _addnode, symObjAddr: 0x25C, symBinAddr: 0x100003CE0, symSize: 0x1F0 }
+  - { offsetInCU: 0x1E1, offset: 0x1E1, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x44C, symBinAddr: 0x100003ED0, symSize: 0xA8 }
+...

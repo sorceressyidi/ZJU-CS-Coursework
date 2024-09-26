@@ -1,0 +1,31 @@
+6
+G 1 H 2 a 3 V 1 I 6 U 2
+3
+G 1
+H 000
+a 010
+V 0011
+I 0010
+U 011
+G 0010
+H 000
+a 010
+V 0001
+I 1
+U 011
+G 0010
+H 000
+a 010
+V 0011
+I 1
+U 011
+----------------------------------
+Output:
+No
+No
+Yes
+----------------------------------
+1.has a higher cost than optimal
+2.optimal cost achieved but with prefix error
+------------------------------
+
