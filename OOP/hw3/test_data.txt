@@ -1,0 +1,49 @@
+12
+Lobby
+Den
+Stable
+Barn
+Gazebo
+Gallery
+Stable
+Vivarium
+Hot Tub
+Workshop
+Vineyard
+Habitat
+10
+11
+0 down 3
+0 east 1
+1 up 8
+1 east 11
+1 down 2
+1 west 5
+2 down 4
+2 up 10
+3 up 9
+3 east 6
+3 west 2
+4 up 10
+4 east 0
+4 west 7
+5 down 4
+5 up 8
+5 east 10
+6 up 3
+7 west 4
+7 down 3
+7 east 5
+8 east 6
+8 up 2
+8 down 4
+9 down 1
+9 east 7
+10 east 1
+10 west 0
+10 up 11
+10 down 11
+11 west 6
+11 up 5
+11 east 5
+11 down 0
