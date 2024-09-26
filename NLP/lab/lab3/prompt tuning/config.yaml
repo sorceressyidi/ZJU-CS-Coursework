@@ -1,0 +1,24 @@
+# 完整的配置文件
+train:
+  num_epochs: 5
+  batch_size: 2
+  shuffle_data: False
+  teacher_forcing: False
+  clean: False
+logging:
+  path: "./loggings"
+  
+dev:
+  batch_size: 2
+  shuffle_data: False
+
+test:
+  batch_size: 2
+  shuffle_data: False
+
+environment:
+    num_gpus: 0
+    cuda_visible_devices:
+        - 0
+    local_rank: 0
+    mode_parallel: True

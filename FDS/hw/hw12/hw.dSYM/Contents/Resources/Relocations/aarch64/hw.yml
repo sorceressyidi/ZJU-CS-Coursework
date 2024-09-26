@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/lily/Desktop/cszju/fds/hw/hw12/hw'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z6outputPii, symObjAddr: 0x0, symBinAddr: 0x100003AC4, symSize: 0x84 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: __Z6outputPii, symObjAddr: 0x0, symBinAddr: 0x100003AC4, symSize: 0x84 }
+  - { offsetInCU: 0x85, offset: 0x85, size: 0x8, addend: 0x0, symName: __Z10merge_sortPii, symObjAddr: 0x84, symBinAddr: 0x100003B48, symSize: 0xE0 }
+  - { offsetInCU: 0xD7, offset: 0xD7, size: 0x8, addend: 0x0, symName: __Z10merge_passPiS_ii, symObjAddr: 0x164, symBinAddr: 0x100003C28, symSize: 0x25C }
+  - { offsetInCU: 0x1B5, offset: 0x1B5, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3C0, symBinAddr: 0x100003E84, symSize: 0xE4 }
+...
