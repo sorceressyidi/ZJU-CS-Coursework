@@ -13,10 +13,11 @@
   * [Fundamental Data Structures](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/FDS)
   * [Digital Image Processing](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/DIP)
   * [Numerical Analysis](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/NA)
-  * [计算机逻辑设计基础]()
-  * [Advanced Data Structures & Algorithms]()
+  * [计算机逻辑设计基础](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/%E8%AE%A1%E9%80%BB)
+  * [Advanced Data Structures & Algorithms](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/ADS)
   * [yy短学期手写CNN](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/CNN)
-  * [OOP](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/OOP)
+  * [Object Oriented Programming](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/OOP)
+  * [Introduction to Natural Language Processing](https://github.com/sorceressyidi/ZJU-CS-Coursework/tree/main/NLP)
   
 Coursework is organized course name. Each course folder contains roughly(not all) the following:
 
