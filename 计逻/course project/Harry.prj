@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/run2.v"
+verilog work "ipcore_dir/run1.v"
+verilog work "ipcore_dir/duck1.v"
+verilog work "clkdiv.v"
+verilog work "Harry.v"

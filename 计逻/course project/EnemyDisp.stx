@@ -1,0 +1,70 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/lily/Desktop/ZJUverilog/Harry/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/lily/Desktop/ZJUverilog/Harry/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: EnemyDisp.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\ipcore_dir\small3.v" into library work
+Parsing module <small3>.
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\ipcore_dir\small2.v" into library work
+Parsing module <small2>.
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\ipcore_dir\small1.v" into library work
+Parsing module <small1>.
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\ipcore_dir\birdup1.v" into library work
+Parsing module <birdup1>.
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\ipcore_dir\birdown.v" into library work
+Parsing module <birdown>.
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\ipcore_dir\big1.v" into library work
+Parsing module <big1>.
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\clkdiv.v" into library work
+Parsing module <clkdiv>.
+Analyzing Verilog file "C:\Users\lily\Desktop\ZJUverilog\Harry\EnemyDisp.v" into library work
+Parsing module <EnemyDisp>.
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.64 secs
+ 
+--> 
+
+Total memory usage is 4496300 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

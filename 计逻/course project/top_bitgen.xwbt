@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Harry\top.ncd
+OUTFILE=G:\Harry\top.bit
+FAMILY=Kintex7
+PART=xc7k160t-1ffg676
+WORKINGDIR=G:\Harry
+LICENSE=WebPack
+USER_INFO=_

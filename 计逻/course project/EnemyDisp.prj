@@ -1,0 +1,8 @@
+verilog work "ipcore_dir/small3.v"
+verilog work "ipcore_dir/small2.v"
+verilog work "ipcore_dir/small1.v"
+verilog work "ipcore_dir/birdup1.v"
+verilog work "ipcore_dir/birdown.v"
+verilog work "ipcore_dir/big1.v"
+verilog work "clkdiv.v"
+verilog work "EnemyDisp.v"

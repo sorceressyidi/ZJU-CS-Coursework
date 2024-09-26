@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/lily/Desktop/ZJUverilog/Harry/KeyBoard.xst" -ofn "C:/Users/lily/Desktop/ZJUverilog/Harry/KeyBoard.syr" 

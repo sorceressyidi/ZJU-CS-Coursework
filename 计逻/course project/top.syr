@@ -1,0 +1,2208 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc7k160t-1-ffg676
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "G:\Harry\bcd1.v" into library work
+Parsing module <bcd1>.
+Analyzing Verilog file "G:\Harry\random.v" into library work
+Parsing module <random>.
+Analyzing Verilog file "G:\Harry\ps2.v" into library work
+Parsing module <ps2>.
+WARNING:HDLCompiler:751 - "G:\Harry\ps2.v" Line 29: Redeclaration of ansi port overflow is not allowed
+Analyzing Verilog file "G:\Harry\ipcore_dir\walk2.v" into library work
+Parsing module <walk2>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\walk1.v" into library work
+Parsing module <walk1>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\small3.v" into library work
+Parsing module <small3>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\small2.v" into library work
+Parsing module <small2>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\small1.v" into library work
+Parsing module <small1>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\jump2.v" into library work
+Parsing module <jump2>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\horizon2.v" into library work
+Parsing module <horizon2>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\horizon1.v" into library work
+Parsing module <horizon1>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\gameover.v" into library work
+Parsing module <gameover>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\duck2.v" into library work
+Parsing module <duck2>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\duck1.v" into library work
+Parsing module <duck1>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\birdup.v" into library work
+Parsing module <birdup>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\birdown.v" into library work
+Parsing module <birdown>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\big3.v" into library work
+Parsing module <big3>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\big2.v" into library work
+Parsing module <big2>.
+Analyzing Verilog file "G:\Harry\ipcore_dir\big1.v" into library work
+Parsing module <big1>.
+Analyzing Verilog file "G:\Harry\clkdiv.v" into library work
+Parsing module <clkdiv>.
+Analyzing Verilog file "G:\Harry\BCD.v" into library work
+Parsing module <BCD>.
+Analyzing Verilog file "G:\Harry\vgac.v" into library work
+Parsing module <vgac>.
+Analyzing Verilog file "G:\Harry\SEGP2S.v" into library work
+Parsing module <SEGP2S>.
+Analyzing Verilog file "G:\Harry\SegDecoder.v" into library work
+Parsing module <SegDecoder>.
+Analyzing Verilog file "G:\Harry\KeyBoard.v" into library work
+Parsing module <KeyBoard>.
+Analyzing Verilog file "G:\Harry\HorizonDisp.v" into library work
+Parsing module <HorizonDisp>.
+WARNING:HDLCompiler:568 - "G:\Harry\HorizonDisp.v" Line 41: Constant value is truncated to fit in <30> bits.
+Analyzing Verilog file "G:\Harry\Harry.v" into library work
+Parsing module <Harry>.
+Analyzing Verilog file "G:\Harry\Game_clk.v" into library work
+Parsing module <Game_clk>.
+Analyzing Verilog file "G:\Harry\gameoverDisp.v" into library work
+Parsing module <gameoverDisp>.
+Analyzing Verilog file "G:\Harry\EnemyDisp.v" into library work
+Parsing module <EnemyDisp>.
+Analyzing Verilog file "G:\Harry\EnemyCtrl.v" into library work
+Parsing module <EnemyCtrl>.
+Analyzing Verilog file "G:\Harry\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <clkdiv(n=2)>.
+WARNING:HDLCompiler:413 - "G:\Harry\clkdiv.v" Line 27: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <KeyBoard>.
+
+Elaborating module <ps2>.
+WARNING:HDLCompiler:1127 - "G:\Harry\KeyBoard.v" Line 36: Assignment to overflow ignored, since the identifier is never used
+
+Elaborating module <Game_clk>.
+WARNING:HDLCompiler:413 - "G:\Harry\Game_clk.v" Line 42: Result of 19-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\Game_clk.v" Line 48: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\Game_clk.v" Line 54: Result of 32-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\Game_clk.v" Line 55: Result of 26-bit expression is truncated to fit in 9-bit target.
+
+Elaborating module <Harry>.
+
+Elaborating module <jump2>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\jump2.v" Line 39: Empty module <jump2> remains a black box.
+
+Elaborating module <walk2>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\walk2.v" Line 39: Empty module <walk2> remains a black box.
+
+Elaborating module <walk1>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\walk1.v" Line 39: Empty module <walk1> remains a black box.
+
+Elaborating module <duck1>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\duck1.v" Line 39: Empty module <duck1> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\Harry.v" Line 80: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <duck2>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\duck2.v" Line 39: Empty module <duck2> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\Harry.v" Line 85: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <clkdiv(n=19)>.
+WARNING:HDLCompiler:413 - "G:\Harry\clkdiv.v" Line 27: Result of 20-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\Harry.v" Line 104: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <clkdiv(n=6)>.
+WARNING:HDLCompiler:413 - "G:\Harry\clkdiv.v" Line 27: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "G:\Harry\top.v" Line 45: Assignment to jumping ignored, since the identifier is never used
+
+Elaborating module <EnemyCtrl>.
+
+Elaborating module <random>.
+
+Elaborating module <BCD>.
+
+Elaborating module <bcd1>.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyCtrl.v" Line 91: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyCtrl.v" Line 109: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyCtrl.v" Line 117: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyCtrl.v" Line 125: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyCtrl.v" Line 133: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <EnemyDisp>.
+
+Elaborating module <small1>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\small1.v" Line 39: Empty module <small1> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\EnemyDisp.v" Line 64: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 10-bit.
+
+Elaborating module <small2>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\small2.v" Line 39: Empty module <small2> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\EnemyDisp.v" Line 71: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <small3>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\small3.v" Line 39: Empty module <small3> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\EnemyDisp.v" Line 78: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <big1>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\big1.v" Line 39: Empty module <big1> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\EnemyDisp.v" Line 85: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <big2>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\big2.v" Line 39: Empty module <big2> remains a black box.
+
+Elaborating module <big3>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\big3.v" Line 39: Empty module <big3> remains a black box.
+
+Elaborating module <birdown>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\birdown.v" Line 39: Empty module <birdown> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\EnemyDisp.v" Line 106: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <birdup>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\birdup.v" Line 39: Empty module <birdup> remains a black box.
+WARNING:HDLCompiler:189 - "G:\Harry\EnemyDisp.v" Line 113: Size mismatch in connection of port <addra>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <clkdiv(n=8)>.
+WARNING:HDLCompiler:413 - "G:\Harry\clkdiv.v" Line 27: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 142: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 159: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 176: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 193: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 210: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 227: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 245: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\EnemyDisp.v" Line 247: Result of 32-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <gameoverDisp>.
+WARNING:HDLCompiler:413 - "G:\Harry\gameoverDisp.v" Line 35: Result of 32-bit expression is truncated to fit in 14-bit target.
+
+Elaborating module <gameover>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\gameover.v" Line 39: Empty module <gameover> remains a black box.
+
+Elaborating module <HorizonDisp>.
+WARNING:HDLCompiler:413 - "G:\Harry\HorizonDisp.v" Line 49: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <horizon1>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\horizon1.v" Line 39: Empty module <horizon1> remains a black box.
+
+Elaborating module <horizon2>.
+WARNING:HDLCompiler:1499 - "G:\Harry\ipcore_dir\horizon2.v" Line 39: Empty module <horizon2> remains a black box.
+WARNING:HDLCompiler:413 - "G:\Harry\HorizonDisp.v" Line 83: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\HorizonDisp.v" Line 86: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\HorizonDisp.v" Line 92: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\HorizonDisp.v" Line 95: Result of 32-bit expression is truncated to fit in 14-bit target.
+
+Elaborating module <clkdiv(n=5)>.
+WARNING:HDLCompiler:413 - "G:\Harry\clkdiv.v" Line 27: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\top.v" Line 123: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "G:\Harry\top.v" Line 126: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <vgac>.
+WARNING:HDLCompiler:1127 - "G:\Harry\top.v" Line 135: Assignment to rdn ignored, since the identifier is never used
+
+Elaborating module <SegDecoder>.
+
+Elaborating module <SEGP2S>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "G:\Harry\top.v".
+WARNING:Xst:647 - Input <SW<15:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "G:\Harry\top.v" line 45: Output port <jumping> of the instance <m2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "G:\Harry\top.v" line 135: Output port <rdn> of the instance <m9> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <released>.
+    Found 16-bit register for signal <hi>.
+    Found 1-bit register for signal <rst>.
+    Found 1-bit register for signal <froze>.
+    Found 1-bit register for signal <bgtype>.
+    Found 4-bit register for signal <bg>.
+    Found 1-bit register for signal <over>.
+    Found 4-bit adder for signal <bg[3]_GND_1_o_add_22_OUT> created at line 123.
+    Found 4-bit subtractor for signal <GND_1_o_GND_1_o_sub_26_OUT<3:0>> created at line 126.
+    Found 16-bit comparator lessequal for signal <hi[15]_score[15]_LessThan_6_o> created at line 78
+    Found 4-bit comparator lessequal for signal <bg[3]_PWR_1_o_LessThan_22_o> created at line 122
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <clkdiv_1>.
+    Related source file is "G:\Harry\clkdiv.v".
+        n = 2
+    Found 2-bit register for signal <cnt>.
+    Found 2-bit adder for signal <cnt[1]_GND_2_o_add_1_OUT> created at line 27.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <clkdiv_1> synthesized.
+
+Synthesizing Unit <KeyBoard>.
+    Related source file is "G:\Harry\KeyBoard.v".
+INFO:Xst:3210 - "G:\Harry\KeyBoard.v" line 36: Output port <overflow> of the instance <m0> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <last_raw>.
+    Found 8-bit register for signal <data>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <KeyBoard> synthesized.
+
+Synthesizing Unit <ps2>.
+    Related source file is "G:\Harry\ps2.v".
+    Found 8x8-bit dual-port RAM <Mram_fifo> for signal <fifo>.
+    Found 4-bit register for signal <count>.
+    Found 3-bit register for signal <w_ptr>.
+    Found 3-bit register for signal <r_ptr>.
+    Found 1-bit register for signal <overflow>.
+    Found 10-bit register for signal <buffer>.
+    Found 3-bit register for signal <ps2_clk_sync>.
+    Found 3-bit adder for signal <w_ptr[2]_GND_4_o_add_10_OUT> created at line 57.
+    Found 4-bit adder for signal <count[3]_GND_4_o_add_14_OUT> created at line 62.
+    Found 3-bit adder for signal <r_ptr[2]_GND_4_o_add_25_OUT> created at line 67.
+    Found 3-bit comparator equal for signal <r_ptr[2]_w_ptr[2]_equal_12_o> created at line 57
+    Found 3-bit comparator equal for signal <n0053> created at line 71
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <ps2> synthesized.
+
+Synthesizing Unit <Game_clk>.
+    Related source file is "G:\Harry\Game_clk.v".
+    Found 18-bit register for signal <maxtick>.
+    Found 12-bit register for signal <maxcnt>.
+    Found 1-bit register for signal <clk_out>.
+    Found 9-bit register for signal <minEmpty>.
+    Found 18-bit register for signal <tick>.
+    Found 18-bit adder for signal <tick[17]_GND_5_o_add_2_OUT> created at line 42.
+    Found 12-bit adder for signal <maxcnt[11]_GND_5_o_add_4_OUT> created at line 48.
+    Found 18-bit subtractor for signal <GND_5_o_GND_5_o_sub_7_OUT<17:0>> created at line 54.
+    Found 18-bit comparator greater for signal <tick[17]_maxtick[17]_LessThan_2_o> created at line 40
+    Found 12-bit comparator greater for signal <maxcnt[11]_PWR_6_o_LessThan_4_o> created at line 46
+    Found 18-bit comparator lessequal for signal <GND_5_o_maxtick[17]_LessThan_6_o> created at line 52
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  58 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <Game_clk> synthesized.
+
+Synthesizing Unit <div_26u_18u>.
+    Related source file is "".
+    Found 43-bit adder for signal <n1971> created at line 0.
+    Found 43-bit adder for signal <GND_6_o_b[17]_add_3_OUT> created at line 0.
+    Found 42-bit adder for signal <n1975> created at line 0.
+    Found 42-bit adder for signal <GND_6_o_b[17]_add_5_OUT> created at line 0.
+    Found 41-bit adder for signal <n1979> created at line 0.
+    Found 41-bit adder for signal <GND_6_o_b[17]_add_7_OUT> created at line 0.
+    Found 40-bit adder for signal <n1983> created at line 0.
+    Found 40-bit adder for signal <GND_6_o_b[17]_add_9_OUT> created at line 0.
+    Found 39-bit adder for signal <n1987> created at line 0.
+    Found 39-bit adder for signal <GND_6_o_b[17]_add_11_OUT> created at line 0.
+    Found 38-bit adder for signal <n1991> created at line 0.
+    Found 38-bit adder for signal <GND_6_o_b[17]_add_13_OUT> created at line 0.
+    Found 37-bit adder for signal <n1995> created at line 0.
+    Found 37-bit adder for signal <GND_6_o_b[17]_add_15_OUT> created at line 0.
+    Found 36-bit adder for signal <n1999> created at line 0.
+    Found 36-bit adder for signal <GND_6_o_b[17]_add_17_OUT> created at line 0.
+    Found 35-bit adder for signal <n2003> created at line 0.
+    Found 35-bit adder for signal <GND_6_o_b[17]_add_19_OUT> created at line 0.
+    Found 34-bit adder for signal <n2007> created at line 0.
+    Found 34-bit adder for signal <GND_6_o_b[17]_add_21_OUT> created at line 0.
+    Found 33-bit adder for signal <n2011> created at line 0.
+    Found 33-bit adder for signal <GND_6_o_b[17]_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <n2015> created at line 0.
+    Found 32-bit adder for signal <GND_6_o_b[17]_add_25_OUT> created at line 0.
+    Found 31-bit adder for signal <n2019> created at line 0.
+    Found 31-bit adder for signal <GND_6_o_b[17]_add_27_OUT> created at line 0.
+    Found 30-bit adder for signal <n2023> created at line 0.
+    Found 30-bit adder for signal <GND_6_o_b[17]_add_29_OUT> created at line 0.
+    Found 29-bit adder for signal <n2027> created at line 0.
+    Found 29-bit adder for signal <GND_6_o_b[17]_add_31_OUT> created at line 0.
+    Found 28-bit adder for signal <n2031> created at line 0.
+    Found 28-bit adder for signal <GND_6_o_b[17]_add_33_OUT> created at line 0.
+    Found 27-bit adder for signal <n2035> created at line 0.
+    Found 27-bit adder for signal <GND_6_o_b[17]_add_35_OUT> created at line 0.
+    Found 26-bit adder for signal <n2039> created at line 0.
+    Found 26-bit adder for signal <a[25]_b[17]_add_37_OUT> created at line 0.
+    Found 26-bit adder for signal <n2043> created at line 0.
+    Found 26-bit adder for signal <a[25]_GND_6_o_add_39_OUT> created at line 0.
+    Found 26-bit adder for signal <n2047> created at line 0.
+    Found 26-bit adder for signal <a[25]_GND_6_o_add_41_OUT> created at line 0.
+    Found 26-bit adder for signal <n2051> created at line 0.
+    Found 26-bit adder for signal <a[25]_GND_6_o_add_43_OUT> created at line 0.
+    Found 26-bit adder for signal <n2055> created at line 0.
+    Found 26-bit adder for signal <a[25]_GND_6_o_add_45_OUT> created at line 0.
+    Found 26-bit adder for signal <n2059> created at line 0.
+    Found 26-bit adder for signal <a[25]_GND_6_o_add_47_OUT[25:0]> created at line 0.
+    Found 26-bit adder for signal <n2063> created at line 0.
+    Found 26-bit adder for signal <a[25]_GND_6_o_add_49_OUT[25:0]> created at line 0.
+    Found 26-bit adder for signal <n2067> created at line 0.
+    Found 26-bit adder for signal <a[25]_GND_6_o_add_51_OUT[25:0]> created at line 0.
+    Found 44-bit adder for signal <GND_6_o_b[17]_add_1_OUT> created at line 0.
+    Found 44-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Summary:
+	inferred  51 Adder/Subtractor(s).
+	inferred  27 Comparator(s).
+	inferred 601 Multiplexer(s).
+Unit <div_26u_18u> synthesized.
+
+Synthesizing Unit <Harry>.
+    Related source file is "G:\Harry\Harry.v".
+    Found 9-bit register for signal <pos>.
+    Found 5-bit register for signal <v>.
+    Found 1-bit register for signal <jumping>.
+    Found 10-bit subtractor for signal <GND_7_o_GND_7_o_sub_6_OUT> created at line 48.
+    Found 32-bit subtractor for signal <GND_7_o_GND_7_o_sub_9_OUT> created at line 48.
+    Found 10-bit subtractor for signal <GND_7_o_GND_7_o_sub_15_OUT> created at line 76.
+    Found 32-bit subtractor for signal <GND_7_o_GND_7_o_sub_18_OUT> created at line 76.
+    Found 10-bit adder for signal <n0112> created at line 44.
+    Found 32-bit adder for signal <GND_7_o_GND_7_o_add_7_OUT> created at line 48.
+    Found 32-bit adder for signal <GND_7_o_GND_7_o_add_16_OUT> created at line 76.
+    Found 9-bit adder for signal <pos[8]_v[4]_add_24_OUT> created at line 103.
+    Found 5-bit adder for signal <v[4]_GND_7_o_add_25_OUT> created at line 104.
+    Found 32x6-bit multiplier for signal <n0090> created at line 48.
+    Found 32x6-bit multiplier for signal <n0094> created at line 76.
+    Found 9-bit comparator lessequal for signal <n0000> created at line 44
+    Found 10-bit comparator greater for signal <GND_7_o_BUS_0001_LessThan_3_o> created at line 44
+    Found 10-bit comparator lessequal for signal <n0005> created at line 45
+    Found 10-bit comparator greater for signal <col[9]_GND_7_o_LessThan_5_o> created at line 45
+    Found 9-bit comparator lessequal for signal <n0015> created at line 72
+    Found 9-bit comparator greater for signal <row[8]_PWR_9_o_LessThan_12_o> created at line 72
+    Found 10-bit comparator greater for signal <col[9]_GND_7_o_LessThan_14_o> created at line 73
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <Harry> synthesized.
+
+Synthesizing Unit <clkdiv_2>.
+    Related source file is "G:\Harry\clkdiv.v".
+        n = 19
+    Found 19-bit register for signal <cnt>.
+    Found 19-bit adder for signal <cnt[18]_GND_14_o_add_1_OUT> created at line 27.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+Unit <clkdiv_2> synthesized.
+
+Synthesizing Unit <clkdiv_3>.
+    Related source file is "G:\Harry\clkdiv.v".
+        n = 6
+    Found 6-bit register for signal <cnt>.
+    Found 6-bit adder for signal <cnt[5]_GND_15_o_add_1_OUT> created at line 27.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <clkdiv_3> synthesized.
+
+Synthesizing Unit <EnemyCtrl>.
+    Related source file is "G:\Harry\EnemyCtrl.v".
+    Found 9-bit register for signal <emptyCnt>.
+    Found 15-bit register for signal <obstacle1>.
+    Found 15-bit register for signal <obstacle2>.
+    Found 15-bit register for signal <obstacle3>.
+    Found 16-bit register for signal <score>.
+    Found 5-bit register for signal <pxcnt>.
+    Found 4-bit register for signal <nextObstacle>.
+    Found 9-bit subtractor for signal <emptyCnt[8]_GND_16_o_sub_34_OUT> created at line 101.
+    Found 9-bit adder for signal <emptyCnt[8]_GND_16_o_add_24_OUT> created at line 91.
+    Found 5-bit adder for signal <pxcnt[4]_GND_16_o_add_65_OUT> created at line 133.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_51_OUT<9:0>> created at line 109.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_55_OUT<9:0>> created at line 117.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_59_OUT<9:0>> created at line 125.
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_2_o> created at line 53
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_3_o> created at line 55
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_4_o> created at line 57
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_5_o> created at line 59
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_6_o> created at line 61
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_7_o> created at line 63
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_8_o> created at line 65
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_9_o> created at line 67
+    Found 30-bit comparator greater for signal <rand[29]_PWR_19_o_LessThan_10_o> created at line 69
+    Found 9-bit comparator greater for signal <emptyCnt[8]_minEmpty[8]_LessThan_24_o> created at line 90
+    Found 5-bit comparator greater for signal <pxcnt[4]_PWR_19_o_LessThan_65_o> created at line 132
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  79 D-type flip-flop(s).
+	inferred  11 Comparator(s).
+	inferred  30 Multiplexer(s).
+Unit <EnemyCtrl> synthesized.
+
+Synthesizing Unit <random>.
+    Related source file is "G:\Harry\random.v".
+    Found 30-bit register for signal <data>.
+    Summary:
+	inferred  30 D-type flip-flop(s).
+Unit <random> synthesized.
+
+Synthesizing Unit <BCD>.
+    Related source file is "G:\Harry\BCD.v".
+INFO:Xst:3210 - "G:\Harry\BCD.v" line 29: Output port <cout> of the instance <m3> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <BCD> synthesized.
+
+Synthesizing Unit <bcd1>.
+    Related source file is "G:\Harry\bcd1.v".
+    Found 5-bit adder for signal <n0016> created at line 28.
+    Found 5-bit adder for signal <sum> created at line 28.
+    Found 5-bit adder for signal <sum[4]_GND_19_o_add_3_OUT> created at line 29.
+    Found 5-bit comparator greater for signal <GND_19_o_sum[4]_LessThan_3_o> created at line 29
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <bcd1> synthesized.
+
+Synthesizing Unit <EnemyDisp>.
+    Related source file is "G:\Harry\EnemyDisp.v".
+    Found 10-bit register for signal <CS1addr>.
+    Found 11-bit register for signal <CS2addr>.
+    Found 11-bit register for signal <CS3addr>.
+    Found 11-bit register for signal <CL1addr>.
+    Found 12-bit register for signal <CL2addr>.
+    Found 12-bit register for signal <CL3addr>.
+    Found 11-bit register for signal <B1addr>.
+    Found 11-bit register for signal <B2addr>.
+    Found 12-bit register for signal <d_out>.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_20_OUT> created at line 142.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_23_OUT> created at line 143.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_42_OUT> created at line 160.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_61_OUT> created at line 177.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_77_OUT> created at line 193.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_80_OUT> created at line 194.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_99_OUT> created at line 211.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_118_OUT> created at line 228.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_123_OUT> created at line 234.
+    Found 32-bit subtractor for signal <GND_20_o_GND_20_o_sub_135_OUT> created at line 245.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_138_OUT> created at line 246.
+    Found 11-bit adder for signal <n0369> created at line 132.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_21_OUT> created at line 142.
+    Found 11-bit adder for signal <n0378> created at line 151.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_40_OUT> created at line 159.
+    Found 11-bit adder for signal <n0386> created at line 168.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_59_OUT> created at line 176.
+    Found 11-bit adder for signal <n0394> created at line 185.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_78_OUT> created at line 193.
+    Found 11-bit adder for signal <n0403> created at line 202.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_97_OUT> created at line 210.
+    Found 11-bit adder for signal <n0411> created at line 219.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_116_OUT> created at line 227.
+    Found 11-bit adder for signal <n0423> created at line 236.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_136_OUT> created at line 245.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_24_OUT<9:0>> created at line 142.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_43_OUT<10:0>> created at line 159.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_62_OUT<10:0>> created at line 176.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_81_OUT<10:0>> created at line 193.
+    Found 12-bit subtractor for signal <GND_20_o_GND_20_o_sub_100_OUT<11:0>> created at line 210.
+    Found 12-bit subtractor for signal <GND_20_o_GND_20_o_sub_119_OUT<11:0>> created at line 227.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_139_OUT<10:0>> created at line 245.
+    Found 32x5-bit multiplier for signal <n0232> created at line 142.
+    Found 32x6-bit multiplier for signal <n0242> created at line 159.
+    Found 32x6-bit multiplier for signal <n0252> created at line 176.
+    Found 32x5-bit multiplier for signal <n0263> created at line 193.
+    Found 32x6-bit multiplier for signal <n0273> created at line 210.
+    Found 32x7-bit multiplier for signal <n0283> created at line 227.
+    Found 32x6-bit multiplier for signal <n0295> created at line 245.
+    Found 4x12-bit Read Only RAM for signal <CS1data[1]_GND_20_o_wide_mux_16_OUT>
+    Found 4x12-bit Read Only RAM for signal <CS2data[1]_GND_20_o_wide_mux_35_OUT>
+    Found 4x12-bit Read Only RAM for signal <CS3data[1]_GND_20_o_wide_mux_54_OUT>
+    Found 4x12-bit Read Only RAM for signal <CL1data[1]_GND_20_o_wide_mux_73_OUT>
+    Found 4x12-bit Read Only RAM for signal <CL2data[1]_GND_20_o_wide_mux_92_OUT>
+    Found 4x12-bit Read Only RAM for signal <CL3data[1]_GND_20_o_wide_mux_111_OUT>
+    Found 12-bit 8-to-1 multiplexer for signal <_n0487> created at line 127.
+    Found 11-bit comparator lessequal for signal <n0009> created at line 130
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0002_LessThan_16_o> created at line 132
+    Found 10-bit comparator lessequal for signal <col[9]_obstacle[9]_LessThan_19_o> created at line 140
+    Found 11-bit comparator lessequal for signal <n0027> created at line 150
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0005_LessThan_35_o> created at line 151
+    Found 9-bit comparator lessequal for signal <n0043> created at line 166
+    Found 11-bit comparator lessequal for signal <n0046> created at line 167
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0008_LessThan_54_o> created at line 168
+    Found 11-bit comparator lessequal for signal <n0062> created at line 184
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0011_LessThan_73_o> created at line 185
+    Found 11-bit comparator lessequal for signal <n0079> created at line 201
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0014_LessThan_92_o> created at line 202
+    Found 9-bit comparator lessequal for signal <n0095> created at line 217
+    Found 9-bit comparator greater for signal <row[8]_PWR_25_o_LessThan_106_o> created at line 217
+    Found 11-bit comparator lessequal for signal <n0099> created at line 218
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0017_LessThan_111_o> created at line 219
+    Found 32-bit comparator lessequal for signal <n0115> created at line 234
+    Found 9-bit comparator greater for signal <row[8]_BirdBottom[8]_LessThan_125_o> created at line 234
+    Found 11-bit comparator lessequal for signal <n0119> created at line 235
+    Found 10-bit comparator lessequal for signal <n0122> created at line 235
+    Found 11-bit comparator greater for signal <GND_20_o_BUS_0020_LessThan_130_o> created at line 236
+    Summary:
+	inferred   6 RAM(s).
+	inferred   7 Multiplier(s).
+	inferred  32 Adder/Subtractor(s).
+	inferred 101 D-type flip-flop(s).
+	inferred  21 Comparator(s).
+	inferred  19 Multiplexer(s).
+Unit <EnemyDisp> synthesized.
+
+Synthesizing Unit <clkdiv_4>.
+    Related source file is "G:\Harry\clkdiv.v".
+        n = 8
+    Found 8-bit register for signal <cnt>.
+    Found 8-bit adder for signal <cnt[7]_GND_29_o_add_1_OUT> created at line 27.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+Unit <clkdiv_4> synthesized.
+
+Synthesizing Unit <gameoverDisp>.
+    Related source file is "G:\Harry\gameoverDisp.v".
+    Found 10-bit subtractor for signal <GND_32_o_GND_32_o_sub_5_OUT> created at line 35.
+    Found 32-bit subtractor for signal <GND_32_o_GND_32_o_sub_8_OUT> created at line 35.
+    Found 32-bit adder for signal <GND_32_o_GND_32_o_add_6_OUT> created at line 35.
+    Found 32x8-bit multiplier for signal <n0020> created at line 35.
+    Found 9-bit comparator lessequal for signal <n0000> created at line 32
+    Found 9-bit comparator greater for signal <row[8]_PWR_35_o_LessThan_2_o> created at line 32
+    Found 10-bit comparator lessequal for signal <n0004> created at line 33
+    Found 10-bit comparator greater for signal <col[9]_GND_32_o_LessThan_4_o> created at line 33
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <gameoverDisp> synthesized.
+
+Synthesizing Unit <HorizonDisp>.
+    Related source file is "G:\Harry\HorizonDisp.v".
+    Found 2-bit register for signal <terrain>.
+    Found 12-bit register for signal <d_out>.
+    Found 14-bit register for signal <H2addr>.
+    Found 14-bit register for signal <H1addr>.
+    Found 1-bit register for signal <terrainid>.
+    Found 10-bit register for signal <TransCol>.
+    Found 11-bit subtractor for signal <GND_35_o_GND_35_o_sub_29_OUT> created at line 84.
+    Found 32-bit subtractor for signal <GND_35_o_GND_35_o_sub_30_OUT> created at line 84.
+    Found 10-bit subtractor for signal <GND_35_o_GND_35_o_sub_40_OUT> created at line 92.
+    Found 32-bit subtractor for signal <GND_35_o_GND_35_o_sub_43_OUT> created at line 92.
+    Found 32-bit adder for signal <GND_35_o_GND_35_o_add_27_OUT> created at line 83.
+    Found 32-bit adder for signal <GND_35_o_GND_35_o_add_41_OUT> created at line 92.
+    Found 10-bit subtractor for signal <GND_35_o_GND_35_o_sub_4_OUT<9:0>> created at line 49.
+    Found 14-bit subtractor for signal <GND_35_o_GND_35_o_sub_31_OUT<13:0>> created at line 83.
+    Found 14-bit subtractor for signal <GND_35_o_GND_35_o_sub_44_OUT<13:0>> created at line 92.
+    Found 32x10-bit multiplier for signal <n0082> created at line 92.
+    Found 30-bit comparator greater for signal <terrain1> created at line 41
+    Found 9-bit comparator lessequal for signal <n0012> created at line 75
+    Found 9-bit comparator greater for signal <row[8]_PWR_37_o_LessThan_15_o> created at line 75
+    Found 10-bit comparator lessequal for signal <n0016> created at line 76
+    Found 10-bit comparator lessequal for signal <n0019> created at line 76
+    Found 10-bit comparator greater for signal <GND_35_o_col[9]_LessThan_18_o> created at line 77
+    Found 10-bit comparator greater for signal <col[9]_PWR_37_o_LessThan_23_o> created at line 80
+    Found 32-bit comparator greater for signal <GND_35_o_GND_35_o_LessThan_25_o> created at line 81
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred  53 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <HorizonDisp> synthesized.
+
+Synthesizing Unit <mod_16u_11u>.
+    Related source file is "".
+    Found 27-bit adder for signal <GND_39_o_b[10]_add_1_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_39_o_b[10]_add_3_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_39_o_b[10]_add_5_OUT> created at line 0.
+    Found 24-bit adder for signal <GND_39_o_b[10]_add_7_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_39_o_b[10]_add_9_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_39_o_b[10]_add_11_OUT> created at line 0.
+    Found 21-bit adder for signal <GND_39_o_b[10]_add_13_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_39_o_b[10]_add_15_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_39_o_b[10]_add_17_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_39_o_b[10]_add_19_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_39_o_b[10]_add_21_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_b[10]_add_23_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_39_o_add_25_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_39_o_add_27_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_39_o_add_29_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_39_o_add_31_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_39_o_add_33_OUT> created at line 0.
+    Found 27-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 257 Multiplexer(s).
+Unit <mod_16u_11u> synthesized.
+
+Synthesizing Unit <clkdiv_5>.
+    Related source file is "G:\Harry\clkdiv.v".
+        n = 5
+    Found 5-bit register for signal <cnt>.
+    Found 5-bit adder for signal <cnt[4]_GND_40_o_add_1_OUT> created at line 27.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+Unit <clkdiv_5> synthesized.
+
+Synthesizing Unit <vgac>.
+    Related source file is "G:\Harry\vgac.v".
+    Found 10-bit register for signal <v_count>.
+    Found 9-bit register for signal <row_addr>.
+    Found 10-bit register for signal <col_addr>.
+    Found 1-bit register for signal <rdn>.
+    Found 1-bit register for signal <hs>.
+    Found 1-bit register for signal <vs>.
+    Found 4-bit register for signal <r>.
+    Found 4-bit register for signal <g>.
+    Found 4-bit register for signal <b>.
+    Found 10-bit register for signal <h_count>.
+    Found 10-bit subtractor for signal <col> created at line 56.
+    Found 10-bit adder for signal <h_count[9]_GND_41_o_add_2_OUT> created at line 38.
+    Found 10-bit adder for signal <v_count[9]_GND_41_o_add_8_OUT> created at line 50.
+    Found 9-bit subtractor for signal <row<8:0>> created at line 55.
+    Found 10-bit comparator greater for signal <h_sync> created at line 57
+    Found 10-bit comparator greater for signal <v_sync> created at line 58
+    Found 10-bit comparator greater for signal <GND_41_o_h_count[9]_LessThan_17_o> created at line 59
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_43_o_LessThan_18_o> created at line 60
+    Found 10-bit comparator greater for signal <GND_41_o_v_count[9]_LessThan_19_o> created at line 61
+    Found 10-bit comparator greater for signal <v_count[9]_PWR_43_o_LessThan_20_o> created at line 62
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vgac> synthesized.
+
+Synthesizing Unit <SegDecoder>.
+    Related source file is "G:\Harry\SegDecoder.v".
+    Found 16x8-bit Read Only RAM for signal <LED>
+    Summary:
+	inferred   1 RAM(s).
+Unit <SegDecoder> synthesized.
+
+Synthesizing Unit <SEGP2S>.
+    Related source file is "G:\Harry\SEGP2S.v".
+    Found 65-bit register for signal <shift>.
+    Found 64-bit register for signal <old_num>.
+    Found 64-bit comparator equal for signal <n0005> created at line 41
+    Summary:
+	inferred 129 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <SEGP2S> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 27
+ 16x8-bit single-port Read Only RAM                    : 8
+ 4x12-bit single-port Read Only RAM                    : 18
+ 8x8-bit dual-port RAM                                 : 1
+# Multipliers                                          : 25
+ 32x10-bit multiplier                                  : 1
+ 32x5-bit multiplier                                   : 6
+ 32x6-bit multiplier                                   : 14
+ 32x7-bit multiplier                                   : 3
+ 32x8-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 220
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 21
+ 11-bit adder                                          : 21
+ 11-bit subtractor                                     : 34
+ 12-bit adder                                          : 1
+ 12-bit subtractor                                     : 6
+ 14-bit subtractor                                     : 2
+ 16-bit adder                                          : 6
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 2
+ 18-bit subtractor                                     : 1
+ 19-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 20-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 22-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 26-bit adder                                          : 17
+ 27-bit adder                                          : 3
+ 28-bit adder                                          : 2
+ 29-bit adder                                          : 2
+ 3-bit adder                                           : 2
+ 30-bit adder                                          : 2
+ 31-bit adder                                          : 2
+ 32-bit adder                                          : 28
+ 32-bit subtractor                                     : 8
+ 33-bit adder                                          : 2
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 2
+ 36-bit adder                                          : 2
+ 37-bit adder                                          : 2
+ 38-bit adder                                          : 2
+ 39-bit adder                                          : 2
+ 4-bit adder                                           : 1
+ 4-bit addsub                                          : 1
+ 40-bit adder                                          : 2
+ 41-bit adder                                          : 2
+ 42-bit adder                                          : 2
+ 43-bit adder                                          : 2
+ 44-bit adder                                          : 1
+ 5-bit adder                                           : 15
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 1
+ 9-bit addsub                                          : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 84
+ 1-bit register                                        : 12
+ 10-bit register                                       : 8
+ 11-bit register                                       : 15
+ 12-bit register                                       : 11
+ 14-bit register                                       : 2
+ 15-bit register                                       : 3
+ 16-bit register                                       : 2
+ 18-bit register                                       : 2
+ 19-bit register                                       : 1
+ 2-bit register                                        : 2
+ 3-bit register                                        : 3
+ 30-bit register                                       : 2
+ 4-bit register                                        : 6
+ 5-bit register                                        : 3
+ 6-bit register                                        : 1
+ 64-bit register                                       : 1
+ 65-bit register                                       : 1
+ 8-bit register                                        : 5
+ 9-bit register                                        : 4
+# Comparators                                          : 155
+ 10-bit comparator greater                             : 12
+ 10-bit comparator lessequal                           : 10
+ 11-bit comparator greater                             : 21
+ 11-bit comparator lessequal                           : 21
+ 12-bit comparator greater                             : 1
+ 16-bit comparator lessequal                           : 7
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator greater                             : 1
+ 18-bit comparator lessequal                           : 2
+ 19-bit comparator lessequal                           : 1
+ 20-bit comparator lessequal                           : 1
+ 21-bit comparator lessequal                           : 1
+ 22-bit comparator lessequal                           : 1
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+ 25-bit comparator lessequal                           : 1
+ 26-bit comparator lessequal                           : 10
+ 27-bit comparator lessequal                           : 2
+ 28-bit comparator lessequal                           : 1
+ 29-bit comparator lessequal                           : 1
+ 3-bit comparator equal                                : 2
+ 30-bit comparator greater                             : 10
+ 30-bit comparator lessequal                           : 1
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 4
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 4-bit comparator lessequal                            : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 5
+ 64-bit comparator equal                               : 1
+ 9-bit comparator greater                              : 10
+ 9-bit comparator lessequal                            : 10
+# Multiplexers                                         : 986
+ 1-bit 2-to-1 multiplexer                              : 873
+ 10-bit 2-to-1 multiplexer                             : 1
+ 11-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 52
+ 12-bit 8-to-1 multiplexer                             : 3
+ 14-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 20
+ 2-bit 2-to-1 multiplexer                              : 9
+ 26-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 6
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 4
+ 65-bit 2-to-1 multiplexer                             : 1
+ 9-bit 2-to-1 multiplexer                              : 5
+# Xors                                                 : 2
+ 1-bit xor4                                            : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/jump2.ngc>.
+Reading core <ipcore_dir/walk2.ngc>.
+Reading core <ipcore_dir/walk1.ngc>.
+Reading core <ipcore_dir/duck1.ngc>.
+Reading core <ipcore_dir/duck2.ngc>.
+Reading core <ipcore_dir/small1.ngc>.
+Reading core <ipcore_dir/small2.ngc>.
+Reading core <ipcore_dir/small3.ngc>.
+Reading core <ipcore_dir/big1.ngc>.
+Reading core <ipcore_dir/big2.ngc>.
+Reading core <ipcore_dir/big3.ngc>.
+Reading core <ipcore_dir/birdown.ngc>.
+Reading core <ipcore_dir/birdup.ngc>.
+Reading core <ipcore_dir/gameover.ngc>.
+Reading core <ipcore_dir/horizon1.ngc>.
+Reading core <ipcore_dir/horizon2.ngc>.
+Loading core <jump2> for timing and area information for instance <start>.
+Loading core <walk2> for timing and area information for instance <dead>.
+Loading core <walk1> for timing and area information for instance <Harrywalk1>.
+Loading core <walk2> for timing and area information for instance <Harrywalk2>.
+Loading core <duck1> for timing and area information for instance <Harrylow1>.
+Loading core <duck2> for timing and area information for instance <Harrylow2>.
+Loading core <small1> for timing and area information for instance <cs1>.
+Loading core <small2> for timing and area information for instance <cs2>.
+Loading core <small3> for timing and area information for instance <cs3>.
+Loading core <big1> for timing and area information for instance <cl1>.
+Loading core <big2> for timing and area information for instance <cl2>.
+Loading core <big3> for timing and area information for instance <cl3>.
+Loading core <birdown> for timing and area information for instance <b1>.
+Loading core <birdup> for timing and area information for instance <b2>.
+Loading core <gameover> for timing and area information for instance <ins>.
+Loading core <horizon1> for timing and area information for instance <h1>.
+Loading core <horizon2> for timing and area information for instance <h2>.
+INFO:Xst:2261 - The FF/Latch <B1addr_0> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_0> 
+INFO:Xst:2261 - The FF/Latch <B1addr_1> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_1> 
+INFO:Xst:2261 - The FF/Latch <B1addr_2> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_2> 
+INFO:Xst:2261 - The FF/Latch <B1addr_3> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_3> 
+INFO:Xst:2261 - The FF/Latch <B1addr_4> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_4> 
+INFO:Xst:2261 - The FF/Latch <B1addr_5> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_5> 
+INFO:Xst:2261 - The FF/Latch <B1addr_6> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_6> 
+INFO:Xst:2261 - The FF/Latch <B1addr_7> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_7> 
+INFO:Xst:2261 - The FF/Latch <B1addr_8> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_8> 
+INFO:Xst:2261 - The FF/Latch <B1addr_9> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_9> 
+INFO:Xst:2261 - The FF/Latch <B1addr_10> in Unit <m4> is equivalent to the following FF/Latch, which will be removed : <B2addr_10> 
+INFO:Xst:2261 - The FF/Latch <B1addr_0> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_0> 
+INFO:Xst:2261 - The FF/Latch <B1addr_1> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_1> 
+INFO:Xst:2261 - The FF/Latch <B1addr_2> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_2> 
+INFO:Xst:2261 - The FF/Latch <B1addr_3> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_3> 
+INFO:Xst:2261 - The FF/Latch <B1addr_4> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_4> 
+INFO:Xst:2261 - The FF/Latch <B1addr_5> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_5> 
+INFO:Xst:2261 - The FF/Latch <B1addr_6> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_6> 
+INFO:Xst:2261 - The FF/Latch <B1addr_7> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_7> 
+INFO:Xst:2261 - The FF/Latch <B1addr_8> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_8> 
+INFO:Xst:2261 - The FF/Latch <B1addr_9> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_9> 
+INFO:Xst:2261 - The FF/Latch <B1addr_10> in Unit <m5> is equivalent to the following FF/Latch, which will be removed : <B2addr_10> 
+INFO:Xst:2261 - The FF/Latch <B1addr_0> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_0> 
+INFO:Xst:2261 - The FF/Latch <B1addr_1> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_1> 
+INFO:Xst:2261 - The FF/Latch <B1addr_2> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_2> 
+INFO:Xst:2261 - The FF/Latch <B1addr_3> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_3> 
+INFO:Xst:2261 - The FF/Latch <B1addr_4> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_4> 
+INFO:Xst:2261 - The FF/Latch <B1addr_5> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_5> 
+INFO:Xst:2261 - The FF/Latch <B1addr_6> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_6> 
+INFO:Xst:2261 - The FF/Latch <B1addr_7> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_7> 
+INFO:Xst:2261 - The FF/Latch <B1addr_8> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_8> 
+INFO:Xst:2261 - The FF/Latch <B1addr_9> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_9> 
+INFO:Xst:2261 - The FF/Latch <B1addr_10> in Unit <m6> is equivalent to the following FF/Latch, which will be removed : <B2addr_10> 
+WARNING:Xst:1293 - FF/Latch <old_num_39> has a constant value of 0 in block <p2s>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <EnemyCtrl>.
+The following registers are absorbed into counter <pxcnt>: 1 register on signal <pxcnt>.
+Unit <EnemyCtrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Game_clk>.
+The following registers are absorbed into counter <tick>: 1 register on signal <tick>.
+The following registers are absorbed into accumulator <maxtick>: 1 register on signal <maxtick>.
+The following registers are absorbed into counter <maxcnt>: 1 register on signal <maxcnt>.
+Unit <Game_clk> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Harry>.
+The following registers are absorbed into accumulator <pos>: 1 register on signal <pos>.
+The following registers are absorbed into counter <v>: 1 register on signal <v>.
+Unit <Harry> synthesized (advanced).
+
+Synthesizing (advanced) Unit <HorizonDisp>.
+The following registers are absorbed into counter <TransCol>: 1 register on signal <TransCol>.
+Unit <HorizonDisp> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SegDecoder>.
+INFO:Xst:3231 - The small RAM <Mram_LED> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <D>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <LED>           |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <score> prevents it from being combined with the RAM <Mram_LED> for implementation as read-only block RAM.
+Unit <SegDecoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv_1>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clkdiv_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv_2>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clkdiv_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv_3>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clkdiv_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv_4>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clkdiv_4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv_5>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clkdiv_5> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ps2>.
+The following registers are absorbed into counter <w_ptr>: 1 register on signal <w_ptr>.
+The following registers are absorbed into counter <r_ptr>: 1 register on signal <r_ptr>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_fifo> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <w_ptr>         |          |
+    |     diA            | connected to signal <buffer<8:1>>   |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <r_ptr>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ps2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top>.
+The following registers are absorbed into counter <bg>: 1 register on signal <bg>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m6/Mram_CL3data[1]_GND_20_o_wide_mux_111_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m6/CL3data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m6/Mram_CL2data[1]_GND_20_o_wide_mux_92_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m6/CL2data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m6/Mram_CL1data[1]_GND_20_o_wide_mux_73_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m6/CL1data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m6/Mram_CS3data[1]_GND_20_o_wide_mux_54_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m6/CS3data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m6/Mram_CS2data[1]_GND_20_o_wide_mux_35_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m6/CS2data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m6/Mram_CS1data[1]_GND_20_o_wide_mux_16_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m6/CS1data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m5/Mram_CL3data[1]_GND_20_o_wide_mux_111_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m5/CL3data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m5/Mram_CL2data[1]_GND_20_o_wide_mux_92_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m5/CL2data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m5/Mram_CL1data[1]_GND_20_o_wide_mux_73_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m5/CL1data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m5/Mram_CS3data[1]_GND_20_o_wide_mux_54_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m5/CS3data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m5/Mram_CS2data[1]_GND_20_o_wide_mux_35_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m5/CS2data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m5/Mram_CS1data[1]_GND_20_o_wide_mux_16_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m5/CS1data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m4/Mram_CL3data[1]_GND_20_o_wide_mux_111_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m4/CL3data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m4/Mram_CL2data[1]_GND_20_o_wide_mux_92_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m4/CL2data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m4/Mram_CL1data[1]_GND_20_o_wide_mux_73_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m4/CL1data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m4/Mram_CS3data[1]_GND_20_o_wide_mux_54_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m4/CS3data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m4/Mram_CS2data[1]_GND_20_o_wide_mux_35_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m4/CS2data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <m4/Mram_CS1data[1]_GND_20_o_wide_mux_16_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m4/CS1data>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgac>.
+The following registers are absorbed into counter <h_count>: 1 register on signal <h_count>.
+The following registers are absorbed into counter <v_count>: 1 register on signal <v_count>.
+Unit <vgac> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 27
+ 16x8-bit single-port distributed Read Only RAM        : 8
+ 4x12-bit single-port distributed Read Only RAM        : 18
+ 8x8-bit dual-port distributed RAM                     : 1
+# Multipliers                                          : 25
+ 32x10-bit multiplier                                  : 1
+ 32x5-bit multiplier                                   : 6
+ 32x6-bit multiplier                                   : 14
+ 32x7-bit multiplier                                   : 3
+ 32x8-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 172
+ 10-bit adder                                          : 4
+ 10-bit subtractor                                     : 23
+ 11-bit adder                                          : 34
+ 11-bit subtractor                                     : 31
+ 12-bit adder                                          : 6
+ 12-bit subtractor                                     : 6
+ 14-bit adder                                          : 2
+ 14-bit subtractor                                     : 4
+ 16-bit adder                                          : 16
+ 26-bit adder                                          : 1
+ 26-bit adder carry in                                 : 25
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 6
+ 5-bit adder                                           : 4
+ 5-bit adder carry in                                  : 4
+ 9-bit addsub                                          : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 18
+ 10-bit down counter                                   : 1
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 2
+ 4-bit up counter                                      : 1
+ 4-bit updown counter                                  : 1
+ 5-bit up counter                                      : 3
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 3
+# Accumulators                                         : 2
+ 18-bit down accumulator                               : 1
+ 9-bit up loadable accumulator                         : 1
+# Registers                                            : 705
+ Flip-Flops                                            : 705
+# Comparators                                          : 155
+ 10-bit comparator greater                             : 12
+ 10-bit comparator lessequal                           : 10
+ 11-bit comparator greater                             : 21
+ 11-bit comparator lessequal                           : 21
+ 12-bit comparator greater                             : 1
+ 16-bit comparator lessequal                           : 7
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator greater                             : 1
+ 18-bit comparator lessequal                           : 2
+ 19-bit comparator lessequal                           : 1
+ 20-bit comparator lessequal                           : 1
+ 21-bit comparator lessequal                           : 1
+ 22-bit comparator lessequal                           : 1
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+ 25-bit comparator lessequal                           : 1
+ 26-bit comparator lessequal                           : 10
+ 27-bit comparator lessequal                           : 2
+ 28-bit comparator lessequal                           : 1
+ 29-bit comparator lessequal                           : 1
+ 3-bit comparator equal                                : 2
+ 30-bit comparator greater                             : 10
+ 30-bit comparator lessequal                           : 1
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 4
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 4-bit comparator lessequal                            : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 5
+ 64-bit comparator equal                               : 1
+ 9-bit comparator greater                              : 10
+ 9-bit comparator lessequal                            : 10
+# Multiplexers                                         : 1048
+ 1-bit 2-to-1 multiplexer                              : 938
+ 11-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 52
+ 12-bit 8-to-1 multiplexer                             : 3
+ 14-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 20
+ 2-bit 2-to-1 multiplexer                              : 9
+ 26-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 6
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 4
+# Xors                                                 : 2
+ 1-bit xor4                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <top>: instances <m6/cdiv2>, <m5/cdiv2> of unit <clkdiv_4> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <top>: instances <m6/cdiv2>, <m4/cdiv2> of unit <clkdiv_4> are equivalent, second instance is removed
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_0> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_1> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_2> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_3> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_4> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_5> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_6> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_7> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_8> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_9> 
+INFO:Xst:2261 - The FF/Latch <m4/B1addr_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m4/B2addr_10> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_10> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_10> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_0> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_1> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_0> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_2> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_1> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_3> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_2> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_4> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_3> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_5> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_4> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_6> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_5> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_7> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_6> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_8> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_7> 
+INFO:Xst:2261 - The FF/Latch <m5/B2addr_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m5/B1addr_9> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_8> 
+INFO:Xst:2261 - The FF/Latch <m6/B2addr_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m6/B1addr_9> 
+WARNING:Xst:1293 - FF/Latch <old_num_39> has a constant value of 0 in block <SEGP2S>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2146 - In block <top>, Counter <m6/cdiv2/cnt> <cdiv2/cnt> are equivalent, XST will keep only <m6/cdiv2/cnt>.
+WARNING:Xst:2677 - Node <Mmult_n00821> of sequential type is unconnected in block <HorizonDisp>.
+WARNING:Xst:2677 - Node <m6/Mmult_n02631> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m6/Mmult_n02521> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m6/Mmult_n02731> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m6/Mmult_n02831> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m6/Mmult_n02421> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m6/Mmult_n02321> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m5/Mmult_n02631> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m5/Mmult_n02521> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m5/Mmult_n02731> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m5/Mmult_n02831> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m5/Mmult_n02421> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m5/Mmult_n02321> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m4/Mmult_n02631> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m4/Mmult_n02521> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m4/Mmult_n02731> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m4/Mmult_n02831> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m4/Mmult_n02421> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m4/Mmult_n02321> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m6/Mmult_n02951> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m5/Mmult_n02951> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <m4/Mmult_n02951> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <Mmult_n00941> of sequential type is unconnected in block <Harry>.
+WARNING:Xst:2677 - Node <Mmult_n00901> of sequential type is unconnected in block <Harry>.
+WARNING:Xst:2677 - Node <Mmult_n00201> of sequential type is unconnected in block <gameoverDisp>.
+WARNING:Xst:1710 - FF/Latch <d_out_3> (without init value) has a constant value of 1 in block <HorizonDisp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_6> (without init value) has a constant value of 1 in block <HorizonDisp>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <d_out_0> in Unit <HorizonDisp> is equivalent to the following 9 FFs/Latches, which will be removed : <d_out_1> <d_out_2> <d_out_4> <d_out_5> <d_out_7> <d_out_8> <d_out_9> <d_out_10> <d_out_11> 
+
+Optimizing unit <top> ...
+
+Optimizing unit <KeyBoard> ...
+
+Optimizing unit <ps2> ...
+
+Optimizing unit <Game_clk> ...
+
+Optimizing unit <div_26u_18u> ...
+
+Optimizing unit <SEGP2S> ...
+
+Optimizing unit <Harry> ...
+
+Optimizing unit <EnemyCtrl> ...
+
+Optimizing unit <random> ...
+
+Optimizing unit <gameoverDisp> ...
+
+Optimizing unit <HorizonDisp> ...
+
+Optimizing unit <mod_16u_11u> ...
+WARNING:Xst:1426 - The value init of the FF/Latch p2s/old_num_7 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch p2s/old_num_15 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch p2s/old_num_23 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch p2s/old_num_31 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch p2s/old_num_47 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch p2s/old_num_55 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch p2s/old_num_63 hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:2677 - Node <m0/m0/overflow> of sequential type is unconnected in block <top>.
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_9> 
+INFO:Xst:2261 - The FF/Latch <m9/col_addr_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m9/h_count_0> <m2/cdiv/cnt_0> 
+INFO:Xst:2261 - The FF/Latch <m9/col_addr_1> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m9/h_count_1> <m2/cdiv/cnt_1> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_10> 
+INFO:Xst:2261 - The FF/Latch <m9/col_addr_2> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m9/h_count_2> <m2/cdiv/cnt_2> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_11> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_11> 
+INFO:Xst:2261 - The FF/Latch <m9/col_addr_3> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m9/h_count_3> <m2/cdiv/cnt_3> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_12> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_12> 
+INFO:Xst:2261 - The FF/Latch <m9/b_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m9/r_2> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_13> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_13> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_14> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_14> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_15> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_15> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_20> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_20> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_16> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_16> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_21> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_21> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_17> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_17> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_22> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_22> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_18> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_18> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_23> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_23> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_19> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_19> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_24> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_24> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_25> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_25> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_26> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_26> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_27> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_27> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_28> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_28> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_29> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_29> 
+INFO:Xst:2261 - The FF/Latch <m6/d_out_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m6/d_out_4> <m6/d_out_8> 
+INFO:Xst:2261 - The FF/Latch <m6/d_out_1> in Unit <top> is equivalent to the following 8 FFs/Latches, which will be removed : <m6/d_out_2> <m6/d_out_3> <m6/d_out_5> <m6/d_out_6> <m6/d_out_7> <m6/d_out_9> <m6/d_out_10> <m6/d_out_11> 
+INFO:Xst:2261 - The FF/Latch <m5/d_out_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m5/d_out_4> <m5/d_out_8> 
+INFO:Xst:2261 - The FF/Latch <m5/d_out_1> in Unit <top> is equivalent to the following 8 FFs/Latches, which will be removed : <m5/d_out_2> <m5/d_out_3> <m5/d_out_5> <m5/d_out_6> <m5/d_out_7> <m5/d_out_9> <m5/d_out_10> <m5/d_out_11> 
+INFO:Xst:2261 - The FF/Latch <m4/d_out_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m4/d_out_4> <m4/d_out_8> 
+INFO:Xst:2261 - The FF/Latch <m4/d_out_1> in Unit <top> is equivalent to the following 8 FFs/Latches, which will be removed : <m4/d_out_2> <m4/d_out_3> <m4/d_out_5> <m4/d_out_6> <m4/d_out_7> <m4/d_out_9> <m4/d_out_10> <m4/d_out_11> 
+INFO:Xst:2261 - The FF/Latch <m9/h_count_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m2/cdiv/cnt_4> 
+INFO:Xst:2261 - The FF/Latch <m9/g_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m9/b_0> <m9/r_0> 
+INFO:Xst:2261 - The FF/Latch <m9/g_1> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <m9/b_1> <m9/r_1> 
+INFO:Xst:2261 - The FF/Latch <p2s/old_num_63> in Unit <top> is equivalent to the following 6 FFs/Latches, which will be removed : <p2s/old_num_55> <p2s/old_num_47> <p2s/old_num_31> <p2s/old_num_23> <p2s/old_num_15> <p2s/old_num_7> 
+INFO:Xst:2261 - The FF/Latch <m9/g_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m9/r_3> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_0> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_1> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_2> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_3> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_4> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_5> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_6> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_7> 
+INFO:Xst:2261 - The FF/Latch <m3/m0/data_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <m8/rnd/data_8> 
+INFO:Xst:3203 - The FF/Latch <m1/maxtick_16> in Unit <top> is the opposite to the following FF/Latch, which will be removed : <m1/maxtick_17> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 4.
+FlipFlop m1/maxtick_0 has been replicated 3 time(s)
+FlipFlop m1/maxtick_1 has been replicated 2 time(s)
+FlipFlop m1/maxtick_10 has been replicated 1 time(s)
+FlipFlop m1/maxtick_11 has been replicated 1 time(s)
+FlipFlop m1/maxtick_12 has been replicated 1 time(s)
+FlipFlop m1/maxtick_13 has been replicated 1 time(s)
+FlipFlop m1/maxtick_14 has been replicated 1 time(s)
+FlipFlop m1/maxtick_15 has been replicated 1 time(s)
+FlipFlop m1/maxtick_16 has been replicated 1 time(s)
+FlipFlop m1/maxtick_2 has been replicated 1 time(s)
+FlipFlop m1/maxtick_3 has been replicated 2 time(s)
+FlipFlop m1/maxtick_4 has been replicated 2 time(s)
+FlipFlop m1/maxtick_5 has been replicated 2 time(s)
+FlipFlop m1/maxtick_6 has been replicated 1 time(s)
+FlipFlop m1/maxtick_7 has been replicated 1 time(s)
+FlipFlop m1/maxtick_8 has been replicated 1 time(s)
+FlipFlop m1/maxtick_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <top> :
+	Found 2-bit shift register for signal <m0/m0/ps2_clk_sync_1>.
+Unit <top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 744
+ Flip-Flops                                            : 744
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5167
+#      GND                         : 34
+#      INV                         : 79
+#      LUT1                        : 114
+#      LUT2                        : 268
+#      LUT3                        : 556
+#      LUT4                        : 1069
+#      LUT5                        : 511
+#      LUT6                        : 597
+#      MUXCY                       : 1156
+#      MUXF7                       : 5
+#      VCC                         : 34
+#      XORCY                       : 744
+# FlipFlops/Latches                : 745
+#      FD                          : 139
+#      FDE                         : 370
+#      FDR                         : 37
+#      FDRE                        : 155
+#      FDS                         : 4
+#      FDSE                        : 40
+# RAMS                             : 36
+#      RAM32M                      : 1
+#      RAM32X1D                    : 2
+#      RAMB18E1                    : 33
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 30
+#      IBUF                        : 4
+#      OBUF                        : 26
+# DSPs                             : 25
+#      DSP48E1                     : 25
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k160tffg676-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             745  out of  202800     0%  
+ Number of Slice LUTs:                 3203  out of  101400     3%  
+    Number used as Logic:              3194  out of  101400     3%  
+    Number used as Memory:                9  out of  35000     0%  
+       Number used as RAM:                8
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3299
+   Number with an unused Flip Flop:    2554  out of   3299    77%  
+   Number with an unused LUT:            96  out of   3299     2%  
+   Number of fully used LUT-FF pairs:   649  out of   3299    19%  
+   Number of unique control sets:        67
+
+IO Utilization: 
+ Number of IOs:                          45
+ Number of bonded IOBs:                  30  out of    400     7%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               17  out of    325     5%  
+    Number using Block RAM only:         17
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+ Number of DSP48E1s:                     25  out of    600     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUF+BUFG              | 267   |
+cdiv/cnt_1                         | BUFG                   | 395   |
+m1/clk_out                         | BUFG                   | 101   |
+m6/cdiv2/cnt_4                     | NONE(bg_0)             | 4     |
+m2/cdiv/cnt_18                     | NONE(m2/pos_8)         | 15    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 26.464ns (Maximum Frequency: 37.788MHz)
+   Minimum input arrival time before clock: 2.246ns
+   Maximum output required time after clock: 2.766ns
+   Maximum combinational path delay: 0.865ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 26.464ns (frequency: 37.788MHz)
+  Total number of paths / destination ports: 554529261179424640000000 / 519
+-------------------------------------------------------------------------
+Delay:               26.464ns (Levels of Logic = 110)
+  Source:            m1/maxtick_4_1 (FF)
+  Destination:       m1/minEmpty_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: m1/maxtick_4_1 to m1/minEmpty_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             2   0.282   0.731  m1/maxtick_4_1 (m1/maxtick_4_1)
+     LUT5:I0->O            1   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_lut<2> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_lut<2>)
+     MUXCY:S->O            1   0.291   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_cy<2> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_cy<3> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_cy<4> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_cy<4>)
+     MUXCY:CI->O          27   0.015   0.564  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<20>_cy<5> (m1/PWR_6_o_maxtick[17]_div_7/o<20>)
+     LUT3:I2->O            6   0.053   0.668  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_GND_6_o_MUX_649_o1141 (m1/PWR_6_o_maxtick[17]_div_7/a[22]_GND_6_o_MUX_627_o)
+     LUT4:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_lutdi2 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_lutdi2)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<2> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<3> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<4> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<5> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<5>)
+     MUXCY:CI->O          41   0.015   0.568  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<17>_cy<6> (m1/PWR_6_o_maxtick[17]_div_7/o<17>)
+     LUT2:I1->O            2   0.053   0.405  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_GND_6_o_MUX_865_o181 (m1/PWR_6_o_maxtick[17]_div_7/a[17]_GND_6_o_MUX_848_o)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_25_OUT_Madd_Madd_cy<17> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_25_OUT_Madd_Madd_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_25_OUT_Madd_Madd_cy<18> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_25_OUT_Madd_Madd_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_25_OUT_Madd_Madd_cy<19> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_25_OUT_Madd_Madd_cy<19>)
+     XORCY:CI->O           1   0.320   0.413  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_25_OUT_Madd_Madd_xor<20> (m1/PWR_6_o_maxtick[17]_div_7/GND_6_o_b[17]_add_25_OUT<20>)
+     LUT6:I5->O            1   0.053   0.399  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_GND_6_o_MUX_1063_o1121 (m1/PWR_6_o_maxtick[17]_div_7/a[20]_GND_6_o_MUX_1043_o)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<20> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<21> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<22> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<23> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_cy<23>)
+     XORCY:CI->O           1   0.320   0.413  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_27_OUT_Madd_Madd_xor<24> (m1/PWR_6_o_maxtick[17]_div_7/GND_6_o_b[17]_add_27_OUT<24>)
+     LUT6:I5->O            1   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_31_OUT_Madd_Madd_lut<24> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_31_OUT_Madd_Madd_lut<24>)
+     MUXCY:S->O            0   0.291   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_31_OUT_Madd_Madd_cy<24> (m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_31_OUT_Madd_Madd_cy<24>)
+     XORCY:CI->O           3   0.320   0.427  m1/PWR_6_o_maxtick[17]_div_7/Madd_GND_6_o_b[17]_add_31_OUT_Madd_Madd_xor<25> (m1/PWR_6_o_maxtick[17]_div_7/GND_6_o_b[17]_add_31_OUT<25>)
+     LUT5:I4->O            5   0.053   0.662  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_GND_6_o_MUX_1243_o1171 (m1/PWR_6_o_maxtick[17]_div_7/a[25]_GND_6_o_MUX_1218_o)
+     LUT5:I1->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<10>_lutdi7 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<10>_lutdi7)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<10>_cy<7> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<10>_cy<7>)
+     MUXCY:CI->O          65   0.015   0.573  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<10>_cy<8> (m1/PWR_6_o_maxtick[17]_div_7/o<10>)
+     LUT6:I5->O            3   0.053   0.649  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_GND_6_o_MUX_1299_o131 (m1/PWR_6_o_maxtick[17]_div_7/a[12]_GND_6_o_MUX_1287_o)
+     LUT4:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_lutdi1 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_lutdi1)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<1> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<2> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<3> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<4> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<5> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<6> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<7> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<7>)
+     MUXCY:CI->O          54   0.015   0.570  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<9>_cy<8> (m1/PWR_6_o_maxtick[17]_div_7/o<9>)
+     LUT4:I3->O            4   0.053   0.419  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_GND_6_o_MUX_1353_o111 (m1/PWR_6_o_maxtick[17]_div_7/a[10]_GND_6_o_MUX_1343_o)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<10> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<11> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<12> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<13> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<14> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<15> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<16> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<17> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<18> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<19> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<20> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<21> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<22> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<23> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_cy<23>)
+     XORCY:CI->O           4   0.320   0.505  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_b[17]_add_37_OUT_Madd_xor<24> (m1/PWR_6_o_maxtick[17]_div_7/a[25]_b[17]_add_37_OUT<24>)
+     LUT3:I1->O            3   0.053   0.739  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_a[25]_MUX_1405_o1161 (m1/PWR_6_o_maxtick[17]_div_7/a[24]_a[25]_MUX_1381_o)
+     LUT5:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<7>_lutdi8 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<7>_lutdi8)
+     MUXCY:DI->O          62   0.278   0.572  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<7>_cy<8> (m1/n0034<7>)
+     LUT4:I3->O            4   0.053   0.419  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_a[25]_MUX_1431_o1241 (m1/PWR_6_o_maxtick[17]_div_7/a[8]_a[25]_MUX_1423_o)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<8> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<9> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<10> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<11> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<12> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<13> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<14> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<15> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<16> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<17> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<18> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<19> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<20> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<21> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_cy<21>)
+     XORCY:CI->O           4   0.320   0.505  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_41_OUT_Madd_xor<22> (m1/PWR_6_o_maxtick[17]_div_7/a[25]_GND_6_o_add_41_OUT<22>)
+     LUT3:I1->O            3   0.053   0.739  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_a[25]_MUX_1457_o1141 (m1/PWR_6_o_maxtick[17]_div_7/a[22]_a[25]_MUX_1435_o)
+     LUT5:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<5>_lutdi8 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<5>_lutdi8)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<5>_cy<8> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<5>_cy<8>)
+     MUXCY:CI->O          67   0.015   0.573  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<5>_cy<9> (m1/n0034<5>)
+     LUT4:I3->O            4   0.053   0.419  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_a[25]_MUX_1483_o1221 (m1/PWR_6_o_maxtick[17]_div_7/a[6]_a[25]_MUX_1477_o)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<6> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<7> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<8> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<9> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<10> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<11> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<12> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<13> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<14> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<15> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<16> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<17> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<18> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<19> (m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_cy<19>)
+     XORCY:CI->O           4   0.320   0.505  m1/PWR_6_o_maxtick[17]_div_7/Madd_a[25]_GND_6_o_add_45_OUT_Madd_xor<20> (m1/PWR_6_o_maxtick[17]_div_7/a[25]_GND_6_o_add_45_OUT<20>)
+     LUT3:I1->O            4   0.053   0.745  m1/PWR_6_o_maxtick[17]_div_7/Mmux_a[0]_a[25]_MUX_1509_o1121 (m1/PWR_6_o_maxtick[17]_div_7/a[20]_a[25]_MUX_1489_o)
+     LUT5:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<3>_lutdi8 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<3>_lutdi8)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<3>_cy<8> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<3>_cy<8>)
+     MUXCY:CI->O          95   0.015   0.651  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<3>_cy<9> (m1/n0034<3>)
+     LUT5:I3->O            3   0.053   0.739  m1/PWR_6_o_maxtick[17]_div_7/Mmux_n2061181 (m1/PWR_6_o_maxtick[17]_div_7/n2061<25>)
+     LUT5:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<2>_lutdi9 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<2>_lutdi9)
+     MUXCY:DI->O          74   0.278   0.647  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<2>_cy<9> (m1/n0034<2>)
+     LUT5:I3->O            2   0.053   0.731  m1/PWR_6_o_maxtick[17]_div_7/Mmux_n2065171 (m1/PWR_6_o_maxtick[17]_div_7/n2065<24>)
+     LUT5:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<1>_lutdi9 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<1>_lutdi9)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<1>_cy<9> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<1>_cy<9>)
+     MUXCY:CI->O          26   0.015   0.636  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<1>_cy<10> (m1/n0034<1>)
+     LUT5:I3->O            2   0.053   0.731  m1/PWR_6_o_maxtick[17]_div_7/Mmux_n1960161 (m1/PWR_6_o_maxtick[17]_div_7/n1960<23>)
+     LUT5:I0->O            0   0.053   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<0>_lutdi9 (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<0>_lutdi9)
+     MUXCY:DI->O           1   0.278   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<0>_cy<9> (m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<0>_cy<9>)
+     MUXCY:CI->O           1   0.204   0.000  m1/PWR_6_o_maxtick[17]_div_7/Mcompar_o<0>_cy<10> (m1/n0034<0>)
+     FDRE:D                    0.011          m1/minEmpty_0
+    ----------------------------------------
+    Total                     26.464ns (9.146ns logic, 17.318ns route)
+                                       (34.6% logic, 65.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cdiv/cnt_1'
+  Clock period: 8.946ns (frequency: 111.780MHz)
+  Total number of paths / destination ports: 1300267 / 1048
+-------------------------------------------------------------------------
+Delay:               8.946ns (Levels of Logic = 21)
+  Source:            m9/row_addr_2 (FF)
+  Destination:       m8/H1addr_13 (FF)
+  Source Clock:      cdiv/cnt_1 rising
+  Destination Clock: cdiv/cnt_1 rising
+
+  Data Path: m9/row_addr_2 to m8/H1addr_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              53   0.282   0.792  m9/row_addr_2 (m9/row_addr_2)
+     LUT4:I0->O            4   0.053   0.655  m8/Msub_GND_35_o_GND_35_o_sub_40_OUT_xor<8>111 (m8/Msub_GND_35_o_GND_35_o_sub_40_OUT_xor<8>11)
+     LUT6:I2->O            8   0.053   0.445  m8/Msub_GND_35_o_GND_35_o_sub_40_OUT_xor<9>11 (m8/GND_35_o_GND_35_o_sub_40_OUT<9>)
+     DSP48E1:A9->P0        4   3.255   0.505  m8/Mmult_n0082 (m8/n0082<0>)
+     LUT2:I0->O            1   0.053   0.413  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd)
+     LUT3:I2->O            1   0.053   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_lut<0>1 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_lut<0>1)
+     MUXCY:S->O            1   0.291   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_0 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>1)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_1 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>2)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_2 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>3)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_3 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>4)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_4 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>5)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_5 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>6)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_6 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>7)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>_7 (m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_cy<0>8)
+     XORCY:CI->O           1   0.320   0.485  m8/Msub_GND_35_o_GND_35_o_sub_43_OUT_Madd_xor<0>_8 (m8/GND_35_o_GND_35_o_sub_43_OUT<9>)
+     LUT2:I0->O            1   0.053   0.000  m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_lut<9> (m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_lut<9>)
+     MUXCY:S->O            1   0.291   0.000  m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<9> (m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<10> (m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<11> (m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<11>)
+     MUXCY:CI->O           0   0.015   0.000  m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<12> (m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_cy<12>)
+     XORCY:CI->O           1   0.320   0.413  m8/Msub_GND_35_o_GND_35_o_sub_44_OUT<13:0>_xor<13> (m8/GND_35_o_GND_35_o_sub_44_OUT<13>)
+     LUT3:I2->O            2   0.053   0.000  m8/GND_35_o_GND_35_o_mux_52_OUT<13>1 (m8/GND_35_o_GND_35_o_mux_52_OUT<13>)
+     FDE:D                     0.011          m8/H1addr_13
+    ----------------------------------------
+    Total                      8.946ns (5.238ns logic, 3.708ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'm1/clk_out'
+  Clock period: 3.843ns (frequency: 260.226MHz)
+  Total number of paths / destination ports: 6734 / 177
+-------------------------------------------------------------------------
+Delay:               3.843ns (Levels of Logic = 9)
+  Source:            m3/emptyCnt_1 (FF)
+  Destination:       m3/obstacle2_9 (FF)
+  Source Clock:      m1/clk_out rising
+  Destination Clock: m1/clk_out rising
+
+  Data Path: m3/emptyCnt_1 to m3/obstacle2_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.282   0.655  m3/emptyCnt_1 (m3/emptyCnt_1)
+     LUT4:I0->O            0   0.053   0.000  m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_lutdi (m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_lutdi)
+     MUXCY:DI->O           1   0.278   0.000  m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<0> (m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<1> (m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<2> (m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<3> (m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<3>)
+     MUXCY:CI->O          47   0.015   0.881  m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<4> (m3/Mcompar_emptyCnt[8]_minEmpty[8]_LessThan_24_o_cy<4>)
+     LUT5:I0->O            3   0.053   0.739  m3/Mmux_obstacle2[14]_GND_16_o_mux_62_OUT19111 (m3/Mmux_obstacle2[14]_GND_16_o_mux_62_OUT1911)
+     LUT5:I0->O            1   0.053   0.725  m3/Mmux_obstacle2[14]_GND_16_o_mux_62_OUT26_SW1 (N143)
+     LUT6:I1->O            1   0.053   0.000  m3/Mmux_obstacle2[14]_GND_16_o_mux_62_OUT26 (m3/obstacle2[14]_GND_16_o_mux_62_OUT<9>)
+     FDRE:D                    0.011          m3/obstacle2_9
+    ----------------------------------------
+    Total                      3.843ns (0.843ns logic, 3.000ns route)
+                                       (21.9% logic, 78.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'm6/cdiv2/cnt_4'
+  Clock period: 1.712ns (frequency: 584.112MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               1.712ns (Levels of Logic = 1)
+  Source:            bg_0 (FF)
+  Destination:       bg_0 (FF)
+  Source Clock:      m6/cdiv2/cnt_4 rising
+  Destination Clock: m6/cdiv2/cnt_4 rising
+
+  Data Path: bg_0 to bg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             6   0.282   0.758  bg_0 (bg_0)
+     LUT5:I0->O            4   0.053   0.419  _n0146_inv1 (_n0146_inv)
+     FDSE:CE                   0.200          bg_0
+    ----------------------------------------
+    Total                      1.712ns (0.535ns logic, 1.177ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'm2/cdiv/cnt_18'
+  Clock period: 2.535ns (frequency: 394.463MHz)
+  Total number of paths / destination ports: 249 / 35
+-------------------------------------------------------------------------
+Delay:               2.535ns (Levels of Logic = 3)
+  Source:            m2/jumping (FF)
+  Destination:       m2/jumping (FF)
+  Source Clock:      m2/cdiv/cnt_18 rising
+  Destination Clock: m2/cdiv/cnt_18 rising
+
+  Data Path: m2/jumping to m2/jumping
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             30   0.282   0.891  m2/jumping (m2/jumping)
+     LUT6:I0->O            7   0.053   0.779  m2/over_key[1]_AND_1067_o1 (m2/over_key[1]_AND_1067_o)
+     LUT6:I0->O            1   0.053   0.413  m2/_n0149 (m2/_n0149)
+     LUT2:I1->O            1   0.053   0.000  m2/jumping_glue_rst (m2/jumping_glue_rst)
+     FDS:D                     0.011          m2/jumping
+    ----------------------------------------
+    Total                      2.535ns (0.452ns logic, 2.083ns route)
+                                       (17.8% logic, 82.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              2.246ns (Levels of Logic = 3)
+  Source:            ps2_data (PAD)
+  Destination:       m0/m0/Mram_fifo1 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: ps2_data to m0/m0/Mram_fifo1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.000   0.479  ps2_data_IBUF (ps2_data_IBUF)
+     LUT6:I5->O            1   0.053   0.739  m0/m0/Mmux_BUS_000112 (m0/m0/Mmux_BUS_000111)
+     LUT6:I0->O            6   0.053   0.432  m0/m0/Mmux_BUS_000114 (m0/m0/BUS_0001)
+     RAM32M:WE                 0.490          m0/m0/Mram_fifo1
+    ----------------------------------------
+    Total                      2.246ns (0.596ns logic, 1.650ns route)
+                                       (26.5% logic, 73.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'm2/cdiv/cnt_18'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              0.777ns (Levels of Logic = 1)
+  Source:            SW<0> (PAD)
+  Destination:       m2/pos_8 (FF)
+  Destination Clock: m2/cdiv/cnt_18 rising
+
+  Data Path: SW<0> to m2/pos_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.000   0.452  SW_0_IBUF (SW_0_IBUF)
+     FDRE:R                    0.325          m2/pos_0
+    ----------------------------------------
+    Total                      0.777ns (0.325ns logic, 0.452ns route)
+                                       (41.8% logic, 58.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cdiv/cnt_1'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              0.695ns (Levels of Logic = 1)
+  Source:            m9/g_1 (FF)
+  Destination:       R<1> (PAD)
+  Source Clock:      cdiv/cnt_1 rising
+
+  Data Path: m9/g_1 to R<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.282   0.413  m9/g_1 (m9/g_1)
+     OBUF:I->O                 0.000          R_1_OBUF (R<1>)
+    ----------------------------------------
+    Total                      0.695ns (0.282ns logic, 0.413ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 96 / 7
+-------------------------------------------------------------------------
+Offset:              2.766ns (Levels of Logic = 13)
+  Source:            p2s/shift_45 (FF)
+  Destination:       SEGCLK (PAD)
+  Source Clock:      clk rising
+
+  Data Path: p2s/shift_45 to SEGCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.282   0.745  p2s/shift_45 (p2s/shift_45)
+     LUT6:I0->O            1   0.053   0.000  p2s/out_wg_lut<1> (p2s/out_wg_lut<1>)
+     MUXCY:S->O            1   0.291   0.000  p2s/out_wg_cy<1> (p2s/out_wg_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<2> (p2s/out_wg_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<3> (p2s/out_wg_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<4> (p2s/out_wg_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<5> (p2s/out_wg_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<6> (p2s/out_wg_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<7> (p2s/out_wg_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<8> (p2s/out_wg_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  p2s/out_wg_cy<9> (p2s/out_wg_cy<9>)
+     MUXCY:CI->O          66   0.178   0.645  p2s/out_wg_cy<10> (p2s/moving)
+     LUT2:I0->O            1   0.053   0.399  p2s/SEGCLK1 (SEGCLK_OBUF)
+     OBUF:I->O                 0.000          SEGCLK_OBUF (SEGCLK)
+    ----------------------------------------
+    Total                      2.766ns (0.977ns logic, 1.789ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.865ns (Levels of Logic = 3)
+  Source:            clk (PAD)
+  Destination:       SEGCLK (PAD)
+
+  Data Path: clk to SEGCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.000   0.413  clk_IBUF (clk_IBUF)
+     LUT2:I1->O            1   0.053   0.399  p2s/SEGCLK1 (SEGCLK_OBUF)
+     OBUF:I->O                 0.000          SEGCLK_OBUF (SEGCLK)
+    ----------------------------------------
+    Total                      0.865ns (0.053ns logic, 0.812ns route)
+                                       (6.1% logic, 93.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock cdiv/cnt_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cdiv/cnt_1     |    8.946|         |         |         |
+clk            |    4.910|         |         |         |
+m1/clk_out     |    7.401|         |         |         |
+m2/cdiv/cnt_18 |    8.371|         |         |         |
+m6/cdiv2/cnt_4 |    1.785|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cdiv/cnt_1     |    5.912|         |         |         |
+clk            |   26.464|         |         |         |
+m1/clk_out     |    4.392|         |         |         |
+m2/cdiv/cnt_18 |    7.060|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock m1/clk_out
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cdiv/cnt_1     |    3.543|         |         |         |
+clk            |    3.842|         |         |         |
+m1/clk_out     |    3.843|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock m2/cdiv/cnt_18
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.505|         |         |         |
+m2/cdiv/cnt_18 |    2.535|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock m6/cdiv2/cnt_4
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.394|         |         |         |
+m6/cdiv2/cnt_4 |    1.712|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.90 secs
+ 
+--> 
+
+Total memory usage is 4690316 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  100 (   0 filtered)
+Number of infos    :  142 (   0 filtered)
+

@@ -1,6 +1,6 @@
 <font face = "Times New Roman" size = "4">
 
-# Fundamental Data Structures
+# Numerical Analysis
 
 * xww老师讲授
 </font>
