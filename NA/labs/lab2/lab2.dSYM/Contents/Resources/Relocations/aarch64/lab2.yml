@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/lily/Desktop/数值分析/lab2/lab2"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BBC, symSize: 0x118 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: __Z3powB7v160006IdiENSt3__19enable_ifIXaasr3std13is_arithmeticIT_EE5valuesr3std13is_arithmeticIT0_EE5valueENS0_9__promoteIS2_S3_vEEE4type4typeES2_S3_, symObjAddr: 0x364, symBinAddr: 0x100003F20, symSize: 0x38 }
+  - { offsetInCU: 0x38A, offset: 0x38A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BBC, symSize: 0x118 }
+  - { offsetInCU: 0x3F9, offset: 0x3F9, size: 0x8, addend: 0x0, symName: __Z15Polynomial_RootiPdddd, symObjAddr: 0x118, symBinAddr: 0x100003CD4, symSize: 0x1B8 }
+  - { offsetInCU: 0x4DF, offset: 0x4DF, size: 0x8, addend: 0x0, symName: __Z3caliPdd, symObjAddr: 0x2D0, symBinAddr: 0x100003E8C, symSize: 0x94 }
+...

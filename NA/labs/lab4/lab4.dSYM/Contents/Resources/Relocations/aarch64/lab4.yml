@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/lily/Desktop/cszju/NA/lab4/lab4'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x10000319C, symSize: 0x3F4 }
+  - { offsetInCU: 0x48, offset: 0x48, size: 0x8, addend: 0x0, symName: __Z3powB7v160006IiiENSt3__19enable_ifIXaasr3std13is_arithmeticIT_EE5valuesr3std13is_arithmeticIT0_EE5valueENS0_9__promoteIS2_S3_vEEE4type4typeES2_S3_, symObjAddr: 0xCAC, symBinAddr: 0x100003E48, symSize: 0x44 }
+  - { offsetInCU: 0x54B, offset: 0x54B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x10000319C, symSize: 0x3F4 }
+  - { offsetInCU: 0x5E5, offset: 0x5E5, size: 0x8, addend: 0x0, symName: __Z6JacobiiPA10_dPdS1_di, symObjAddr: 0x3F4, symBinAddr: 0x100003590, symSize: 0x4C4 }
+  - { offsetInCU: 0x78B, offset: 0x78B, size: 0x8, addend: 0x0, symName: __Z12Gauss_SeideliPA10_dPdS1_di, symObjAddr: 0x8B8, symBinAddr: 0x100003A54, symSize: 0x28 }
+  - { offsetInCU: 0x7FD, offset: 0x7FD, size: 0x8, addend: 0x0, symName: __Z6changePA10_dPdi, symObjAddr: 0x8E0, symBinAddr: 0x100003A7C, symSize: 0x3A4 }
+  - { offsetInCU: 0x941, offset: 0x941, size: 0x8, addend: 0x0, symName: __Z4fabsB7v160006IbENSt3__19enable_ifIXsr3std11is_integralIT_EE5valueEdE4typeES2_, symObjAddr: 0xC84, symBinAddr: 0x100003E20, symSize: 0x28 }
+...

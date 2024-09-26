@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8">
+  <link rel="canonical" href="https://blog.csdn.net/SydneyCarton_/article/details/114983592">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="report" content="{&quot;spm&quot;:&quot;1001.2101&quot;,&quot;extra&quot;:{&quot;titAb&quot;:&quot;control&quot;,&quot;lvab&quot;:&quot;t_old&quot;},&quot;pid&quot;:&quot;blog&quot;}">
+  <meta name="referrer" content="always">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="alternate" media="handheld" href="#">
+  <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+  <meta name="applicable-device" content="pc">
+  <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon">
+  <title>NA-PTA-NA Lab3 线性方程组求解[严格对角占优/正定的Gauss-Seidel法]_there is no free lunch pta_SydneyCarton_的博客-CSDN博客</title>
+  <meta name="keywords" content="there is no free lunch pta">
+  <meta name="csdn-baidu-search" content="{&quot;autorun&quot;:true,&quot;install&quot;:true,&quot;keyword&quot;:&quot;there is no free lunch pta&quot;}">
+  <meta name="description" content="There is No Free LunchFormat of function:void Price( int n, double p[] );where int n satisfies that 2< n ≤10000; double p[ ] is passed into the function as an array of prices p​i​​  and then will be returned storing the costs of the dishes.Sample _there is no free lunch pta">
+  <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/css/detail_enter-e7d5e741b1.min.css">
+  <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/themesSkin/skin-whitemove/skin-whitemove-2af9149bdc.min.css">
+  <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+  <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+ </head>
+ <body class="nodata " style="">
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/pc/css/blog_code-01256533b5.min.css">
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/chart-3456820cac.css">
+  <link rel="stylesheet" href="https://g.csdnimg.cn/lib/swiper/6.0.4/css/swiper.css"><div class="main_father clearfix d-flex justify-content-center mainfather-concision" style="height:100%;"><div class="container clearfix container-concision" id="mainBox">
+    <main>
+     <div class="blog-content-box"><div class="article-header-box"><div class="article-header"><div class="article-title-box">
+         <h1 class="title-article" id="articleContentId">NA-PTA-NA Lab3 线性方程组求解[严格对角占优/正定的Gauss-Seidel法]</h1></div><div class="article-info-box"><div class="article-bar-top"><img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt=""><div class="bar-content"><img class="article-vip-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/identityVip.png" alt=""> <span class="article-vip-text vip_article"> VIP文章</span> <a class="follow-nickName " href="https://blog.csdn.net/SydneyCarton_" target="_blank" rel="noopener" title="SydneyCarton_">SydneyCarton_</a> <img class="article-time-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png" alt=""> <span class="time">于&nbsp;2021-03-18 16:42:31&nbsp;发布</span> <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes2.png" alt=""> <span class="read-count">212</span> <a id="blog_detail_zk_collection" class="un-collection" data-report-click="{&quot;mod&quot;:&quot;popu_823&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4232&quot;,&quot;ab&quot;:&quot;new&quot;}"> <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect2.png" alt=""> <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive2.png" alt=""> <span class="name">收藏</span> <span class="get-collection"> </span> </a></div></div><div class="blog-tags-box"><div class="tags-box artic-tag-box"><span class="label">分类专栏：</span> <a class="tag-link" href="https://blog.csdn.net/sydneycarton_/category_10860329.html" target="_blank" rel="noopener">数值分析</a> <span class="label">文章标签：</span> <a rel="nofollow" data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;线性代数&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;extra&quot;:&quot;{\&quot;searchword\&quot;:\&quot;线性代数\&quot;}&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=" target="_blank">线性代数</a> <a rel="nofollow" data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;算法&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;extra&quot;:&quot;{\&quot;searchword\&quot;:\&quot;算法\&quot;}&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=%E7%AE%97%E6%B3%95&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=" target="_blank">算法</a></div></div><div class="slide-content-box"><div class="article-copyright"><div class="creativecommons">
+            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。</div><div class="article-source-link">
+            本文链接：<a href="https://blog.csdn.net/SydneyCarton_/article/details/114983592" target="_blank">https://blog.csdn.net/SydneyCarton_/article/details/114983592</a></div></div></div><div class="operating"><a class="href-article-edit slide-toggle">版权</a></div></div></div></div><div id="blogHuaweiyunAdvert"></div>
+      <article class="baidu_pl"><div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-dc4a025e85.css"><div id="content_views" class="markdown_views prism-tomorrow-night-eighties">
+         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+         </svg>
+         <p><strong>There is No Free Lunch</strong><br> <img src="https://img-blog.csdnimg.cn/20210318163718478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N5ZG5leUNhcnRvbl8=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+         <p><strong>Format of function:</strong></p>
+         <pre><code class="prism language-c"><span class="token keyword">void</span> <span class="token function">Price</span><span class="token punctuation">(</span> <span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">double</span> p<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+         <p>where int n satisfies that 2&lt; n ≤10000; double p[ ] is passed into the function as an array of prices p​i​​ and then will be returned storing the costs of the dishes.</p>
+         <p><strong>Sample program of judge:</strong></p>
+         <pre><code class="prism language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">Max_size</span> <span class="token expression"><span class="token number">10000</span> </span><span class="token comment">/* max number of dishes */</span></span>
+
+<span class="token keyword">void</span> <span class="token function">Price</span><span class="token punctuation">(</span> <span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">double</span> p<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{<!-- --></span>
+    <span class="token keyword">int</span> n<span class="token punctuation">,</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">double</span> p<span class="token punctuation">[</span>Max_size<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> 
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">Price</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.2f "</span><span class="token punctuation">,</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* Your function will be put here */</span>
+</code></pre>
+         <p><strong>Sample Input:</strong></p>
+         <pre><code class="prism language-c"><span class="token number">12</span> <span class="token number">23.64</span> <span class="token number">17.39</span> <span class="token number">12.77</span> <span class="token number">16.62</span> <span class="token number">10.67</span> <span class="token number">14.85</span> <span class="token number">12.68</span> <span class="token number">26.90</span> <span class="token number">28.30</span> <span class="token number">15.59</span> <span class="token number">37.99</span> <span class="token number">23.18</span>
+</code></pre>
+         <p><strong>Sample Output:</strong></p>
+         <pre><code class="prism language-c"><span class="token number">9.20</span> <span class="token number">5.58</span> <span class="token number">3.24</span> <span class="token number">7.00</span> <span class="token number">1.99</span> <span class="token number">6.36</span> <span class="token number">2.25</span> <span class="token number">10.01</span> <span class="token number">11.52</span> <span class="token number">0.50</span> <span class="token number">17.65</span> <span class="token number">4.88</span> 
+</code></pre>
+         <p>本题的矩阵A：<br> <img src="https://img-blog.csdnimg.cn/20210318163941554.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N5ZG5leUNhcnRvbl8=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+         <p>这可能是NA lab里最简单的一道，只要知道Gauss-Seidel方法求线性方程组。当系数矩阵 A严格对角占优或正定时，Gauss-Seidel迭代法必收敛。<br> 其中，x初始值是随便估计的，非常随意，它会自己收敛到最终结果，只是迭代次数不同罢了。下面程序中初始值全部设为0.</p>
+         <p><img src="https://img-blog.csdnimg.cn/20210318163953801.png" alt="在这里插入图片描述"><br> 在本题中，可以简化如下：<br> <img src="https://img-blog.csdnimg.cn/20210318164012889.png" alt="在这里插入图片描述"><br> <strong>My answer:</strong></p>
+         <pre><code class="prism language-c"><span class="token keyword">void</span> <span class="token function">Price</span><span class="token punctuation">(</span> <span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">double</span> p<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{<!-- --></span>
+	<span class="token keyword">int</span> i<span class="token punctuation">,</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">double</span> x<span class="token punctuation">[</span>Max_size<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>cnt<span class="token operator">++</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+			x<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token punctuation">(</span> x<span class="token punctuation">[</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token operator">+</span>n<span class="token punctuation">)</span><span class="token operator">%</span>n<span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">2.0</span> <span class="token operator">+</span> x<span class="token punctuation">[</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">%</span>n<span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">2.0</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2.0</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>
+		p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+        <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-98b95bb57c.css" rel="stylesheet">
+        <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-c216769e99.css" rel="stylesheet"></div>
+      </article></div>
+    </main></div><div class="recommend-right align-items-stretch clearfix" id="rightAside" data-type="recommend"></div></div>
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.12/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-eighties.css">
+ </body>
+</html>
